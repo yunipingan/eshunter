@@ -120,16 +120,16 @@
 /*职位介绍和公司介绍*/
 .index_con{ width: 100%; display: inline-block; z-index: 1;}
 .jieshao{ width: 800px; padding: 20px 20px 0 20px; overflow: hidden; float: right;  background: #fff; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px;}
-.jieshao_tb{    line-height: 22px;
+.gongsi_tb,.jieshao_tb{    line-height: 22px;
 	margin-top: 20px;
     color: #999;
     font-size: 16px;
     border-bottom: 1px solid #e8e8e8;}
-.jieshao_tb span{     margin: 0 60px 0 0;
+.gongsi_tb span,.jieshao_tb span{     margin: 0 60px 0 0;
     padding: 16px 0;
     cursor: pointer;
     display: inline-block;}
-.jieshao_tb span.active{     padding-bottom: 14px;
+.gongsi_tb span.active,.jieshao_tb span.active{     padding-bottom: 14px;
     color: #333;
     cursor: default;
     border-bottom: 2px solid #333;}
@@ -146,6 +146,7 @@
     padding: 20px 18px 0;
     border: 1px solid #dcdcdc;
     margin-bottom: -1px;}
+.tuijian-company{display: none;}
 .jieshao_list li:hover{box-shadow: 2px 2px 2px #ebebeb;}
 .jieshao_list li.greenborder_li{ border: 1px solid #D32F2F; box-shadow: 0px 0px 8px #D32F2F inset; position: relative; z-index: 10;}
 .jieshao_list li:last-child{margin-bottom: 1px;}

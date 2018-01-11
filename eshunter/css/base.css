@@ -118,7 +118,7 @@ em.msg_amount {
 /*footer*/
 .footer{     width: 100%;
     border-top: 1px solid #eee;
-    background: #fff;
+    background: #fefefe;
     position: absolute;
     bottom: 0;}
 .footer p{}
@@ -128,7 +128,7 @@ em.msg_amount {
     font-size: 12px;
     padding: 10px 0;
     margin-top: 10px;}
-.footer_con{ width: 900px;  margin: 0 auto; padding: 10px 0 0; display:table;}
+.footer_con{ width: 960px;  margin: 0 auto; padding: 10px 0 0; display:table;}
 .footer_top{ width: 100%;  display:inline-block;}
 .footer_top ul{ float: left; width: 70px; height:172px; padding: 0px 46px; overflow: hidden; color: #fff; /*margin-top: 20px;*/}
 .footer_top li{ font-size: 16px; font-family: '微软雅黑'; }
