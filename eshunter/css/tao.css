@@ -162,7 +162,7 @@
 .pli_top{height: 22px;width: 100%;}
 .position_name{font-size: 0;height:22px;max-width: 290px;float: left;}
 .position_name h2{font-size: 16px;color: #333;display: inline-block;vertical-align: middle;}
-.position_name h2 a{max-width: 140px;}
+.position_name h2 a{max-width: 140px;color: #666;}
 .position_name h2 a:hover{color: #D32F2F;}
 .create_time{color: #999;font-size: 14px;vertical-align: middle;}
 .salary{float: right;color: #D32F2F;font-size: 14px;line-height: 22px;}
@@ -195,6 +195,35 @@
 .ad_company .ad_company_list{width: inherit;background: #fff;}
 .ad_company .company_item{width: 225px;border: 1px solid #d5d5d5;float: left;margin: 16px 5px 16px 7px;padding-bottom: 16px;}
 .ad_company .company_item:hover{box-shadow: 2px 2px 2px #ebebeb;}
+.gallery-item.larger-item {width: 350px;}
+.gallery-item {
+    margin: 5px;
+    width: 200px;
+    height: 200px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    position: relative;
+    float: left;
+}
+.gallery-link {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    display: block;
+}
+.gallery-item .text {
+    padding: 0 0 0 16px;
+    height: 38px;
+    line-height: 38px;
+    color: #fff;
+    font-size: 14px;
+    background-color: rgba(0,0,0,.2);
+    display: block;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+}
 .company-name{height: 22px;line-height: 22px;margin-top: 13px;font-size: 16px;color: #333;text-align: center;}
 .company-name a:hover{color: #d32f2f;}
 .indus-stage{height: 22px;line-height: 22px;margin-top: 3px;color: #999;text-align: center;}

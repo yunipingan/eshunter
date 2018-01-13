@@ -11,7 +11,7 @@ $(function(){
 
     $('#chakan').live("click",function(){
     	var xinkeywd = $("#xinkeywd").val();
-    	if(xinkeywd=="请输入关键词，如：产品经理" || xinkeywd==""){
+    	if(xinkeywd=="请输入关键词，如：运营策划" || xinkeywd==""){
     		xinkeywd="";
     	}else{
     		if(CheckStr(xinkeywd) == false){
@@ -19,10 +19,10 @@ $(function(){
         		return;
         	}
     	}
-    	if(xinkeywd == "c++" || xinkeywd == "C++"){
+    	if(xinkeywd == "打野" || xinkeywd == "打野"){
     		xinkeywd =xinkeywd.substring(0,1) +  "jiajia";
     	}
-    	if(xinkeywd == "c#" || xinkeywd == "C#"){
+    	if(xinkeywd == "电竞" || xinkeywd == "电竞"){
     		xinkeywd =xinkeywd.substring(0,1) +  "jing";
     	}
     	window.location.href =BaseJSURL + "/jc/?mkwd=" + xinkeywd;

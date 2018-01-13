@@ -19,13 +19,7 @@ $(document).ready(function(){
 		});
 		
 		
-		$('.phoneget').click(function(){
-			window.location.href = BaseURL+"forget.html";
-		});
 		
-		$('.emailget').click(function(){
-			window.location.href = BaseURL+"/fp/forgetpasswordforemail";
-		});
 
 
 		//发送短信验证

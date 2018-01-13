@@ -43,9 +43,9 @@
 //var Base_Jianli_URL = "http://f.360shejiao.com/jianli";
 
 // neipin
- var BaseURL = 'http://www.neipin.com';
- var BaseJSURL = 'http://www.neipin.com';
- var user_photo_url = "http://f.neipin.com/photo";
- var photo_tmp_url = "http://f.neipin.com/photo/temp";
- var company_photo_url = "http://f.neipin.com/photo/company";
- var Base_Jianli_URL = "http://f.neipin.com/jianli";
+ var BaseURL = 'http://www.eshunter.com';
+ var BaseJSURL = 'http://www.eshunter.com';
+ var user_photo_url = "http://f.eshunter.com/photo";
+ var photo_tmp_url = "http://f.eshunter.com/photo/temp";
+ var company_photo_url = "http://f.eshunter.com/photo/company";
+ var Base_Jianli_URL = "http://f.eshunter.com/jianli";
