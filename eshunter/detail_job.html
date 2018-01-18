@@ -1,0 +1,793 @@
+<html class="hb-loaded">
+<head>
+<meta content="IE=EmulateIE9" http-equiv="X-UA-Compatible">
+<meta charset="UTF-8">
+<title>职位详情</title>
+<link href="http://www.eshunter.com/favicon/favicon-16x16.png" rel="shortcut icon">
+<link media="all" href="css/pub.css?v=2.33" type="text/css" rel="stylesheet">
+<link media="all" href="css/style.css?v=2.35" type="text/css" rel="stylesheet">
+<link media="all" href="css/fabu.css?v=2.35" type="text/css" rel="stylesheet">
+<link media="all" href="css/common2.css?v=2.32" type="text/css" rel="stylesheet">
+<link href="css/base.css?v=2.39" type="text/css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/zhiwei.css"/>
+<link href="css/style_qq.css?v=2.33" type="text/css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+<script charset="utf-8" type="text/javascript" src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js"></script>
+<script src="js/hm.js?e57ac2e0d645c16f50e241abc140f59f"></script><script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script defer="defer" src="js/layer.js" type="text/javascript"></script>
+<script defer="defer" src="js/ajaxfileupload.js?v=2.32" type="text/javascript"></script>
+<script defer="defer" src="js/constants.js?v=2.32" type="text/javascript"></script> 
+<script defer="defer" src="js/json2.js" type="text/javascript"></script> 
+<script defer="defer" src="js/common.js?v=2.34" type="text/javascript"></script>  
+<script defer="defer" src="js/jquery.qrcode.min.js" type="text/javascript"></script>
+<script defer="defer" src="js/choose.js?v=2.33" type="text/javascript"></script> 
+<script defer="defer" src="js/loading.js?v=2.32" type="text/javascript"></script> 
+<script defer="defer" src="js/pc_shareJob.js?v=2.35" type="text/javascript"></script> 
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script src="http://api.map.baidu.com/api?v=2.0&amp;ak=DXXDAljTbI9hcGGiswoGDwsQ" type="text/javascript"></script><script src="http://api.map.baidu.com/getscript?v=2.0&amp;ak=DXXDAljTbI9hcGGiswoGDwsQ&amp;services=&amp;t=20150624121059" type="text/javascript"></script>
+<script type="text/javascript">
+var one="0";
+var uname = "";
+var default_jianli = "";
+var default_jianli2 = "";
+var toudi_state = "0";
+
+var default_flag = 0;
+var flag = 0;
+//.............
+var num_flag = "";
+var val_1 = "";
+var val_2 = "";
+
+var ie_num = "";
+   
+var myflag = "";
+var openid = "";
+var jobid = "45588";
+// 判断是否登录
+var uname = "";
+</script>
+<style type="text/css">
+	
+</style>
+</head>
+<body>
+
+<script>
+var jianlistatustype="";
+var tui_user_pro='';
+var res_tuijian='';
+var uname = "";
+var ukbn = "";
+var isIE7 = false;
+//验证标识
+var verifyflg="";
+	
+function logout(){
+    jQuery.ajax({   
+        type: 'post',   
+        contentType : 'application/json; charset=utf-8',   
+        dataType: 'json',   
+        url: '/ajax/logout.do', 
+        data: JSON.stringify(new Object()),   
+        success: function(data){
+            window.location.href = "/";
+        }
+    })
+}
+
+$(document).ready(function(){    
+//底部tab切换
+	$('.contact_Con .contactCon').hide();
+	$('.contact_Con .contactCon').eq(0).show();
+	$('.contact_tab span').click(function(){
+		$(this).addClass('active');
+		$(this).siblings().removeClass('active');
+		$('.contact_Con .contactCon').hide();
+		$('.contact_Con .contactCon').eq($(this).index()).show();
+		
+	})
+
+//判断是否为ie6
+    var isIE=!!window.ActiveXObject;
+    var isIE6=isIE&&!window.XMLHttpRequest;
+    var isIE8=isIE&&!!document.documentMode;
+    var isIE7=isIE&&!isIE6&&!isIE8;
+    if (isIE){
+        isIE7 = true;
+        if (isIE6){
+    			$('.bsie').show();
+    		}
+    }
+    $('.closeBtn').click(function(){
+    $('.a_box').hide();
+    })
+  
+//底部二维码
+	$('.about_Us span.ma_img').mouseover(function(){
+	$(this).find('img').show();
+	})
+	$('.about_Us span.ma_img').mouseout(function(){
+	$(this).find('img').hide();
+	})
+	//点击登录
+	$('#login_click').live("click",function(){
+		my_login();
+	});
+	
+	if(ukbn==1){
+		getSelectHrJobJianLi();
+	}
+	//点击导航的登录 
+	$('#dl_span').live("click",function(){
+		window.location.href='login.html.html';
+	});
+	
+	// 账号的回车事件
+	$('#myusername').keydown(function(event){
+		if(13 == event.keyCode || 13 == event.which){
+			my_login();
+		}
+	});
+	
+	//密码的回车事件
+	$('#mypassword').keydown(function(event){
+		if(13 == event.keyCode || 13 == event.which){
+			my_login();
+		}
+	});
+	
+	// 搜索职位的回车事件 
+	$('#my_job_form').keydown(function(event){
+		if(13 == event.keyCode || 13 == event.which){
+			headtijiao();
+		}
+	});
+	
+
+	//登录框隐藏与显示
+	//$('.dl_hide').hide();
+	$('.pos_dl'). mouseenter(function(){
+	  $('.dl_hide').show();
+	});
+	$('.pos_dl').mouseleave(function(){
+	  $('.dl_hide').hide();
+	});
+
+	//鼠标滑过2维码显示
+	$('.wx_pos').mouseover(function(){
+		$(this).find('img').show();
+	})
+
+	$('.wx_pos').mouseleave(function(){
+		$(this).find('img').hide();
+	})	
+	if(uname!=""&&uname!=null){
+		// 调用此方法 
+		getSelectProfileJobJianLi();
+	}
+	
+	// 事件关闭
+      $('.event_top span').click(function(){
+        $(this).parent().slideUp();
+      })       
+      
+      $('.event_top').click(function(){
+          window.open("/act");
+      })
+	
+	
+	
+	if(uname != "" && uname != null && ukbn == 1){
+	    getHrNewJianliNum();
+	}
+	
+});
+
+// 查询职位方法 
+function headtijiao(){
+	var xinkeywd = encodeURIComponent($("#my_job_form").val());
+	window.location.href='/job/?mkwd='+xinkeywd;
+}
+//查询职位方法结束 
+
+// 登录方法 
+function my_login(){
+	$("#herders_cuowu").hide();
+	var param = new Object();
+	param.emailAddr = $("#myusername").val();
+	param.passwd = $("#mypassword").val();
+	if(param.emailAddr == "")
+        {
+            $("#herders_cuowu").html("请填写用户名");
+            $("#herders_cuowu").show();
+            return;
+        }
+	if(param.passwd == "")
+        {
+            $("#herders_cuowu").html("请填写密码");
+            $("#herders_cuowu").show();
+            return;
+        }
+        
+	jQuery.ajax({   
+		type: 'post',   
+		contentType : 'application/json; charset=utf-8',   
+		dataType: 'json',   
+		url: '/ajax/login.do', 
+		data: JSON.stringify(param),   
+		success: function(data){
+			if(data.ret == "0")
+				{
+					if(data.ukbn==1){
+                      	//window.location.href = "/hr/";
+                      	window.location.href = "/job.html";
+                      } else{
+                      	window.location.href = "/job.html";
+                      }
+				}
+                else if(data.ret == -1)
+                {
+                        $("#herders_cuowu").html("用户不存在或密码错误");
+                        $("#herders_cuowu").show();
+                }
+                else
+                {
+                        $("#herders_cuowu").html("登录失败，请稍候重试");
+                        $("#herders_cuowu").show();
+                }
+        }
+	});
+};
+//查询普通用户没有回复hr面试通知的数量
+function getSelectProfileJobJianLi(){
+	var param = new Object();
+	var total = 0;
+	jQuery.ajax({   
+		type: 'post',   
+		contentType : 'application/json; charset=utf-8',   
+		dataType: 'json',   
+		url: '/ajax/getSelectProfileJobJianLi.do', 
+		data: JSON.stringify(param),   
+		success: function(data){
+			if(data.np.number0>0)
+			{
+			    total = total + data.np.number0;
+				//$("#profile_jianli_number").text(data.np.number0);
+				//$("#profile_jianli_number").show();
+				$("#profile_jianli_number2").text(data.np.number0);
+				$("#profile_jianli_number2").show();
+			}
+			if(jianlistatustype==0){
+				if(data.np.number1>0)
+				{
+					$("#profile_jianli_number_1").text(data.np.number1);
+					$("#profile_jianli_number_1").show();
+				}
+				if(data.np.number2>0)
+				{
+					$("#profile_jianli_number_2").text(data.np.number2);
+					$("#profile_jianli_number_2").show();
+				}
+				if(data.np.number3>0)
+				{
+					$("#profile_jianli_number_3").text(data.np.number3);
+					$("#profile_jianli_number_3").show();
+				}
+				
+			}
+			if(jianlistatustype==1){
+				if(data.np.number3>0)
+				{
+					$("#profile_jianli_number_1").text(data.np.number4);
+					$("#profile_jianli_number_1").show();
+				}
+				if(data.np.number4>0)
+				{
+					$("#profile_jianli_number_2").text(data.np.number5);
+					$("#profile_jianli_number_2").show();
+				}
+				if(data.np.number5>0)
+				{
+					$("#profile_jianli_number_3").text(data.np.number6);
+					$("#profile_jianli_number_3").show();
+				}
+				
+			}
+			var jk=parseInt(data.np.number1)+parseInt(data.np.number2)+parseInt(data.np.number3);
+			var jk1=parseInt(data.np.number4)+parseInt(data.np.number5)+parseInt(data.np.number6);
+			if(jk>0)
+			{
+					$("#profile_jianli_number_4").text(jk);
+					$("#profile_jianli_number_4").show();
+			}
+			if(jk1>0)
+			{
+					$("#profile_jianli_number_5").text(jk1);
+					$("#profile_jianli_number_5").show();
+			}
+			total = total + jk + jk1;
+			if(total > 0)
+			{
+			    $("#jianli_status").append('<em>'+total+'</em>');
+			}
+        }
+	});
+};
+
+//查询hr没有回复数量 
+function getSelectHrJobJianLi(){
+	jQuery.ajax({   
+		type: 'post',   
+		contentType : 'application/json; charset=utf-8',   
+		dataType: 'json',   
+		url: '/ajax/getSelectHrJobJianLi.do', 
+		data: JSON.stringify(new Object()),   
+		success: function(data){
+			if(data.np.number1>0){
+				$("#hr_mei_jianli").append("<em>"+data.np.number1+"</em>");
+				$("#shou").append("<em>"+data.np.number1+"</em>");
+			}
+			if(data.np.number2>0){
+				$("#hr_tong_jianli").append("<em>"+data.np.number2+"</em>");
+			}
+        }
+	});	
+};
+
+//查询Hr新简历数
+function getHrNewJianliNum(){
+		jQuery.ajax({ 
+		     type: 'post',   
+				contentType : 'application/json; charset=utf-8',   
+				dataType: 'json',   
+				url: '/ajax/newnum.do', 
+				data: JSON.stringify(new Object()),   
+				success: function(data){
+				   if(data.newnum > 0){
+				      $('.num').show();
+				      $('.num').text(data.newnum);
+				   }else{
+				      $('.num').hide();
+				   }
+				}
+		});
+}
+
+//登录结束 
+</script>
+<div style="width:100%; height:50px; line-height:50px; font-size:18px; color:#b94a48; background:#f2dede; text-align:center;" class="bsie">
+	<span>本系统可能有些功能不支持IE6，请用更高版本或其他的浏览器</span>
+</div>
+<!-- 头部 -->
+<div id="es_tbar">
+                <div class="inner">
+                    <div class="es_tbar_l">
+                        <span class="iconfont icon-shouji"></span><a class="es_app" href="#" rel="nofollow">电竞猎人APP</a>
+                        <a class="es_os" href="#" rel="nofollow">进入企业版</a>
+                    </div>
+                    <ul class="es_tbar_r">
+                        <li>
+                            <a class="message" href="#">消息<em class="msg_amount" id="headMsgAmount">2</em></a>
+                        </li>
+                        <li><a href="#">我的简历</a></li>
+                        <li><a href="#">投递箱</a></li>
+                        <li><a href="#">收藏夹</a></li>
+                        <li class="user_dropdown">
+                            <a href="#">用户<span></span></a>
+                            <ul>
+                                <li><a href="">我的订阅</a></li>
+                                <li><a href="">职位邀请</a></li>
+                                <li><a href="">账号设置</a></li>
+                                <li><a href="">去企业版</a></li>
+                                <li><a href="">退出</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>  
+            <div class="header">
+                <div class="header_con">
+                    <div class="logo-con">
+                        <a title="" href="index.html"><img src="images/logo-black.png" style="height:43px;width:132px"></a>
+                        <span style="padding-left:10px;font-size:12px;color:#999;display: inline-block;margin-top: 25px;">电竞猎人 - 做专业的竞技游戏职业招聘网站</span>
+                    </div>
+                    <ul class="nav_ul">
+                        <li id="index"><a class="home" title="电竞猎人" href="index.html">首页</a></li>
+                        <li id="company"><a class="qiye" title="" href="#" rel="nofollow">职位搜索</a></li>
+                        <li class="pos_relative" id="xiu"><a class="xiu" title="精准推荐" href="#" rel="nofollow">大神库</a></li>
+                        <li id="cuan"><a class="post_Jb" title="" href="#" rel="nofollow">资讯中心</a></li>
+                    </ul>
+                </div>
+            </div>
+
+<script src="js/jquery.wheelmenu.js" type="text/javascript"></script>
+<div class="QQ_each">
+        <a class="wheel-button float_qq" href="#wheel" style="opacity: 1;"></a>
+        <ul class="wheel" id="wheel">
+            <li class="item"><a href="404.html"></a></li>
+            <li class="item"><a href="404.html"></a></li>
+            <li class="item"><a href="404.html"></a></li>
+            <li class="item"><a href="404.html"></a></li>
+            <!--<li class="item"><a target="_blank" href="404.html" class='sss'>沙僧</a></li>-->
+            <li class="item"><a class="bj" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1538590175&amp;site=qq&amp;menu=yes" target="_blank">求职<br>服务</a></li>
+            <li class="item"><a class="wk" href="http://wpa.qq.com/msgrd?v=3&amp;uin=3078167392&amp;site=qq&amp;menu=yes" target="_blank">招聘<br>服务</a></li>
+            <li class="item"><a class="ts" href="http://wpa.qq.com/msgrd?v=3&amp;uin=6281927&amp;site=qq&amp;menu=yes" target="_blank">bug<br>反馈</a></li>      
+            <li class="item"><a href="404.html"></a></li>
+            <li class="item"><a href="404.html"></a></li>
+            <li class="item"><a href="404.html"></a></li>
+        </ul>
+    </div>
+<a style="display: none;" class="back_to_top" title="" href="404.html"></a>
+
+<script type="text/javascript">
+$(".wheel-button").wheelmenu({
+    // alert(1);
+    trigger: "hover",
+    animation: "fly",
+    angle: [0, 360]
+});
+</script>
+
+</div>
+<div class="position-head" data-companyid="304142">
+    <div class="position-content ">
+        <div class="position-content-l">
+            <div class="job-name" title="产品助理实习生">
+                                <div class="company">原链科技产品部招聘</div>
+                                <span class="name">产品助理实习生</span>
+                                <span class="outline_tag">（该职位已下线）</span>
+                                <div class="marEdit">
+                                    </div>
+            </div>
+            <dd class="job_request">
+                <p>
+                    <span class="salary">2k-3k </span>
+                    <span>/成都 /</span>
+                    <span>经验应届毕业生 /</span>
+                    <span>大专及以上 /</span>
+                    <span>实习</span>
+                </p>
+                <!-- 职位标签 -->
+                <ul class="position-label clearfix">
+                                        <li class="labels">产品经理</li>
+                                        <li class="labels">实习生</li>
+                                        <li class="labels">市场分析</li>
+                                    </ul>
+                <p class="publish_time">2017-12-25&nbsp; 发布于电竞猎人</p>
+            </dd>
+        </div>
+
+        <div class="position-content-r clearfix">
+            <div class="position-deal clearfix">
+            	<div class="resume-deliver">
+            	<!-- <a rel="nofollow" href="javascript:;" class="btn fr btn_sended">已下线</a> -->
+                <a rel="nofollow" href="javascript:;" class="send-CV-btn s-send-btn fr gray" style="display: none;">已下线</a>
+                <a rel="nofollow" class="send-CV-btn s-send-btn fr"  href="javascript:;" >投个简历</a>
+            	</div>
+            	<div class="jd_collection  job-collection " data-lg-tj-id="9500" data-lg-tj-no="0001" data-lg-tj-cid="idnull">
+            		<i class="iconfont icon-star"> </i>收藏
+            	</div>
+            </div>
+
+            <!-- 简历状态 -->            
+            <ul class="resume-select clearfix">
+                            <!-- 用户是否激活 0-否；1-是 -->
+               	<li class="resume resume-attachment">
+               		<span class="select-radio  selected " data-type="0"></span>
+               		<span>
+               			<a href="#" title="下载XX简历.wps">
+               				<i class="iconfont icon-paper-clip"></i>
+               				xx简历.wps
+               			</a>
+               		</span>
+               	</li>
+                <li class="resume no-resume-online">
+                	<span>
+                		<a href="#" target="_blank" title="完善在线简历" rel="nofollow">
+                			<i class="iconfont icon-jianli"></i>
+                			完善在线简历
+                		</a>
+                	</span>
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="info_container clearfix">
+	<div class="content_l left">
+
+		<dl class="job_detail" id="job_detail">
+			<dt class="clearfix join_tc_icon"></dt>
+			<dd class="job_advantage">
+				<span class="advantage">职位诱惑:</span>
+				<p>五险一金,包三餐,双休,健身房</p>
+			</dd>
+			<dd class="job_bt">
+				<h3 class="descrition">职位描述:</h3>
+				<div>
+        			<p>职位描述：</p>
+					<p><br></p>
+					<p>1、负责公司相关产品的界面UI设计、优化以及规范管理，活动页面设计；</p>
+					<p><br></p>
+					<p>2、参与制定项目UI的详细设计规范，整理详细功能的设计规范文档；</p>
+					<p><br></p>
+					<p>3、参与公司产品及功能的创意设计的更新迭代。</p>
+					<p><br></p>
+					<p>4、有逻辑的思考，对产品界面进行持续的设计优化，提升用户体验并做到极致；</p>
+					<p><br></p>
+					<p>5、配合同事根据需求完成有效的设计。</p>
+					<p><br></p>
+					<p><br></p>
+					<p>任职要求：</p>
+					<p><br></p>
+					<p>1、本科及以上学历，美术及设计等相关专业；</p>
+					<p><br></p>
+					<p>2、3年以上网站或APP等界面设计经验，有成功的项目设计作品和案例；</p>
+					<p><br></p>
+					<p>3、精通使用Photoshop、Illustrator，会插画，卡通形象，动画设计者优先；</p>
+					<p><br></p>
+					<p>4、对从用户出发的设计理念有深刻的理解，能准确把握用户需求，出色的设计语言表达能力；</p>
+					<p><br></p>
+					<p>5、具有良好的沟通能力和团队合作精神，能在高强度的环境下准时、高效的完成工作。</p>
+					<p><br></p>
+					<p><br></p>
+					<p>注：我们想要年轻有活力、有创造力的设计师，经验和学历都不是重点，但愿能看到你的设计灵魂。（请随简历附上代表作品或相关链接）</p>
+				</div>
+			</dd>
+			<dd class="job_address clearfix">
+				<h3 class="address">工作地址</h3>
+				<div class="work_addr">
+					<a href="#" rel="nofollow">成都</a>-
+					<a href="#" rel="nofollow">武侯区</a>-创业路49号
+					<a href="javascript:;" id="mapPreview" rel="nofollow">查看地图</a>
+				</div>
+			</dd> 
+			<dd class="job_publisher">
+				<h3>职位发布:</h3>
+				<div class="border_c clearfix">
+					<img src="images/pic0.jpg" width="60" height="60"/>
+					<div class="publisher_name">
+						<a title="LGD">
+							<span class="name">一lomo</span>
+							<span class="chat_me"></span>
+						</a>	
+						<span class="pos">HR</span>
+					</div>
+					<div class="publisher_data">
+						<div>
+							<span class="data_title">
+								聊天意愿
+								<i></i>
+							</span>
+							<span class="tip_text">1个月内职位发布者回复聊天的占比</span>
+							<span class="data">很弱</span>
+							<span class="tip_s">
+								回复率
+								<i>--</i>
+								&nbsp;用时
+								<i class="light_tip">13</i>分钟
+							</span>
+						</div>
+						<em></em>
+						<div>
+							<span class="data_title">
+								简历处理
+								<i></i>
+							</span>
+							<span class="tip_text">7日内职位发布者简历处理效率</span>
+							<span class="data">超快</span>
+							<span class="tip_s">
+								处理率
+								<i>--</i>
+								&nbsp;用时
+								<i class="light_tip">1</i>天
+							</span>
+						</div>
+						<em></em>
+						<div>
+							<span class="data_title">
+								活跃时段
+								<i></i>
+							</span>
+							<span class="tip_text">1个月内职位发布者最活跃时段统计</span>
+							<span class="data">下午</span>
+							<span class="tip_s">
+								<i class="light_tip">2</i>点最活跃
+							</span>
+						</div>
+					</div>
+				</div>
+			</dd>
+		</dl>
+		<dl class="interview_experience module-container">
+			<div class="module-title" id="review_anchor">
+				面试评价
+			</div>
+			<a href="" class="checkAll" style="display: none;">查看该公司全部面试评价</a>
+			<div class="reviews-area">
+				<div class="list-empty">
+					<i></i>
+					<span>该职位尚未收到面试评价</span>
+					<span class="list_empty_tips">
+						<a href="" target="_blank" class="list_empty_link">其他职位的面试评价</a>
+					</span>
+				</div>
+			</div>
+		</dl>
+	</div>
+	<div class="content_r">
+		<dl class="job_company" id="job_company">
+			<dt>
+				<a href="#" target="_blank">
+					<img  class="b2" src="images/pic0.jpg" width="96" height="96"/>
+					<div>
+						<h2 class="left">
+							成都市米彩科技有限公司
+						</h2>
+						<span class="dn">电竞猎人认证企业</span>
+					</div>
+				</a>
+			</dt>
+			<dd>
+				<ul class="c_feature">
+					<li>
+						<i class="iconfont icon-qita1"></i>
+						电竞运营，教育
+						<span class="hovertips">领域</span>
+					</li>
+					<li>
+						<i class="iconfont icon-zhexiantu"></i>
+						 不需要融资
+						<span class="hovertips">发展阶段</span>
+					</li>
+					<li>
+						<i class="iconfont icon-ren"></i>
+						 50-150人
+						<span class="hovertips">规模</span>
+					</li>
+					<li>
+						<i class="iconfont icon-zhuye"></i>
+						<a href="#" target="_blank" title="#" rel="nofollow">http://www.mgm.com/</a>
+						<span class="hovertips">公司主页</span>
+					</li>
+				</ul>
+			</dd>
+		</dl>
+		<div class="jobs_similar" id="jobs_similar">
+			<h4 class="jobs_similar_header">
+				<span>相似职位</span>
+			</h4>
+			<div class="jobs_similar_content" id="jobs_similar_content" style="display: none;">
+				<div class="jobs_similar_detail" id="jobs_similar_detail">
+					<ul class="similar_list reset">
+						<li class="similar_list_item  clearfix">
+							<a href="#" class="position_link clearfix" target="_blank">
+								<div class="similar_list_item_logo">
+									<img src="images//pic0.jpg"/ width="56" height="56" style="display: block;">
+								</div>
+								<div class="similar_list_item_pos">
+									<h2 title="">王者荣耀职业玩家</h2>
+									<p>7k-10k</p>
+									<p class="similar_company_name">EDG俱乐部[成都-华阳]</p>
+								</div>
+							</a>
+						</li>
+						<li class="similar_list_item  clearfix">
+							<a href="#" class="position_link clearfix" target="_blank">
+								<div class="similar_list_item_logo">
+									<img src="images//pic0.jpg"/ width="56" height="56" style="display: block;">
+								</div>
+								<div class="similar_list_item_pos">
+									<h2 title="">王者荣耀职业玩家</h2>
+									<p>7k-10k</p>
+									<p class="similar_company_name">EDG俱乐部[成都-华阳]</p>
+								</div>
+							</a>
+						</li>
+						<li class="similar_list_item  clearfix">
+							<a href="#" class="position_link clearfix" target="_blank">
+								<div class="similar_list_item_logo">
+									<img src="images//pic0.jpg"/ width="56" height="56" style="display: block;">
+								</div>
+								<div class="similar_list_item_pos">
+									<h2 title="">王者荣耀职业玩家</h2>
+									<p>7k-10k</p>
+									<p class="similar_company_name">EDG俱乐部[成都-华阳]</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="nodata_similar_list"></div>
+		</div>
+	</div>
+</div>
+<div class="footer">
+                <div class="footer_con">
+                    <div class="footer_top">
+                        <div class="about_Us">
+                            <div class="contact_left">
+                                <div><img src="images/logo-black.png" style="height:43px;width:132px"></div> 
+                                <p>电竞猎人 - 做专业的竞技游戏职业招聘网站</p>
+                            </div>
+                            <!-- <div class="contact_right">
+                                <div class="contact_tab">
+                                    <span class="active">友情链接</span>
+                                    <span>合作伙伴</span>
+                                </div> 
+                                <div class="contact_Con">
+                                    <div style="padding: 10px 0px 30px; display: block;" class="contactCon">
+                                        <a title="" href="http://www.dajiatou.com" >大家投</a> |
+                                        <a href="http://www.uidesign.cc" >莱茵教育</a>  | 
+                                        <a title="" href="http://www.hostucan.cn" >IDC点评网</a> | 
+                                        <a title="" href="http://www.tklab.cn" >CCIE培训</a> | 
+                                        <a title="" href="http://www.51lietou.com" >51猎头</a> |
+                                        <a title="" href="http://www.vchello.com" >VChello微投网</a> |
+                                        <a title="" href="http://www.jianzhimao.com" >大学生找兼职</a>
+                                        <a title="" href="http://www.dajiatou.com" >大家投</a> |
+                                        <a href="http://www.uidesign.cc" >莱茵教育</a>  | 
+                                        <a title="" href="http://www.hostucan.cn" >IDC点评网</a> | 
+                                        <a title="" href="http://www.tklab.cn" >CCIE培训</a> | 
+                                        <a title="" href="http://www.51lietou.com" >51猎头</a> |
+                                        <a title="" href="http://www.vchello.com" >VChello微投网</a> |
+                                        <a title="" href="http://www.jianzhimao.com" >大学生找兼职</a>
+                                    </div>
+                                    <div style="padding-top: 10px; display: none;" class="contactCon">
+                                        <img src="images/dajiatou.jpg">
+                                        <img src="images/fenghuang.jpg">
+                                        <img src="images/lianxiang.jpg">
+                                        <img src="images/xiecheng.jpg">
+                                        <img src="images/yuuan.jpg">
+                                        <img src="images/zhaohang.jpg">
+                                        <img src="images/baidu.jpg">
+                                        <img src="images/mogu.jpg">
+                                        <img src="images/yong.jpg">
+                                    </div>
+                                </div> 
+                            </div> -->
+                        </div>
+                        <div class="foot_list">
+                            <div class="foot_list_item">
+                                <span class="about_left"><a title="" href="#">简历指导</a></span>
+                                <span class="about_left"><a title="" href="#">关于我们</a></span>
+                                <span class="about_left"><a title="" href="#">联系我们</a></span>
+                                <span class="about_left"><a title="" href="#">网站地图</a></span>
+                                <span class="about_left"><a title="" href="#">免责申明</a></span>
+                                <span class="about_left"><a title="" href="http://weibo.com/neipin2013" rel="nofollow" >微博</a></span>
+                                <span class="about_left wx_pos">
+                                    <a title="" href="javascript:void(0)">微信服务号</a>
+                                    <img src="images/yujia.jpg">
+                                </span>
+                            
+                            </div>
+                            <p style="margin-top:10px;" class="seap">
+                    <span style="color:#939393">沪ICP备17037845号-1</span>
+                    <a  href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010102004612" target="_blank" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+                    <img src="http://www.eshunter.com/images/police.png" style="float:left;">
+                    <span style="height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">沪公网安备 31010102004612号</span>
+                    <span style="padding-left:15px;color:#939393"> ©2017电竞猎人 | E-sport Hunter版权所有</span>
+                </a>
+                </p>
+                        </div> 
+                    </div>
+                </div>
+                
+            </div>
+
+
+
+<div style="display:none;" class="hr_sao">
+  <span></span>
+  <dl>
+    <dt><img alt="" src="" id="erweima"></dt>
+    <dd>实时跟踪简历状态</dd>
+    <dd>不错过任何一个面试机会</dd>
+  </dl>
+</div>
+
+</body></html>
