@@ -267,3 +267,11 @@ li {
     display: list-item;
     text-align: -webkit-match-parent;
 }
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+label, select, button, input[type=button], input[type=reset], input[type=submit], input[type=radio], input[type=checkbox], input[type=file] {
+    cursor: pointer;
+}
