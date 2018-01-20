@@ -275,3 +275,13 @@ form {
 label, select, button, input[type=button], input[type=reset], input[type=submit], input[type=radio], input[type=checkbox], input[type=file] {
     cursor: pointer;
 }
+input[type=text], input[type=password], textarea {
+    font-family: "Microsoft Yahei",SimSun,Arial,"Helvetica Neue",Helvetica;
+}
+button, input, optgroup, select, textarea {
+    margin: 0;
+    padding: 0;
+    border: 1px solid #ededed;
+    border-radius: 0;
+    font-family: "Hiragino Sans GB","Microsoft Yahei",SimSun,Arial,"Helvetica Neue",Helvetica;
+}

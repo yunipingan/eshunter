@@ -4,10 +4,13 @@
         <link href="http://www.eshunter.com/favicon/favicon-16x16.png" rel="shortcut icon">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta content="6641350777616510166375" property="qc:admins">
-        <title>账号信息</title>
+        <title>账号绑定</title>
         <link href="css/tao_company.css" type="text/css" rel="stylesheet">
         <link href="css/style.css" type="text/css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/user_style.css"/>
+        <link href="css/base.css?v=2.39" type="text/css" rel="stylesheet">
+        <link href="css/style_qq.css?v=2.33" type="text/css" rel="stylesheet">
+        <script charset="utf-8" type="text/javascript" src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js"></script>
         <script src="js/hm.js?e57ac2e0d645c16f50e241abc140f59f"></script>
         <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
         <script defer="defer" src="js/constants.js?v=2.32" type="text/javascript"></script>
@@ -18,7 +21,7 @@
         <script defer="defer" src="js/public.js?v=2.32" type="text/javascript"></script>
         <script defer="defer" src="js/main.js?v=2.32" type="text/javascript"></script> 
         <script defer="defer" src="js/companyresult.js?v=1.03" type="text/javascript"></script>  
-     <script>
+     	<script>
                                         var techtag = "";
                                         var jieduan = "";
                                         var area = "";
@@ -77,11 +80,11 @@
                                                 });
                                         }
         </script>
-    </head>
+	    <style type="text/css">
+	    	.user_userinfo_content1{margin-left: 15px;}
+	    </style>
+	</head>
     <body>
-            <link href="css/base.css?v=2.39" type="text/css" rel="stylesheet">
-            <link href="css/style_qq.css?v=2.33" type="text/css" rel="stylesheet">  
-            <script charset="utf-8" type="text/javascript" src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js"></script>
             <script>
                                             var jianlistatustype = "";
                                             var tui_user_pro = '';
@@ -423,61 +426,125 @@
 				<div class="user_bindSidebar">
 					<ul class="user_sideBarmenu">
 						<li>
-							<a href="userInfo.html" class="hover_ac" >个人信息</a>
+							<a href="userInfo.html" >个人信息</a>
 						</li>
 						<li>
-            				<a href="accoutBind.html" >帐号绑定</a>
+            				<a href="accoutBind.html" class="hover_ac">帐号绑定</a>
         				</li>
         				<li>
-            				<a href="#" >隐私设置</a>
+            				<a href="resumePrivacy.html" >隐私设置</a>
         				</li>
         				<li>
-            				<a href="#" >修改密码</a>
+            				<a href="updatePwd.html" >修改密码</a>
         				</li>
 					</ul>
 				</div>
 				<div class="user_userinfo_content1">
-					<div class="c_section">
-						<div class="userinfo_edit">
-							<div class="hadInfo">
-								<span class="edit_link" id="edit_link">编辑</span>
-								<div class="view_avatar">
-									<img class="avatar_img" src="images/pic0.jpg" width="100" height="100">
+					<div class="user_bindContent">
+						<dl class="c_section">
+							<dt id="autofiletitle">
+								<div>
+									账号：18888999990&nbsp;&nbsp;
+									<span id="changePhoneBtn" class="operate">更换手机号</span>
 								</div>
-								<div class="view_nickname">
-									<span>某某</span>
-									<i class="icon-gender man"></i>
+								<div class="tips">绑定后，你可以同时使用以下方式登录电竞猎人</div>
+							</dt>
+							<dd>
+								<dl class="user_thirdLogin clearfix">
+									<dt>
+										<img src="//static.lagou.com/www/static/account-c/modules/common/img/icon-tencent_c85c20a.png" alt="qq">
+									</dt>
+									<dd>
+										<a href="https://passport.lagou.com/oauth20/auth_qqProvider.html?state=bind">绑定QQ帐号</a>
+									</dd>
+								</dl>
+								<dl class="user_thirdLogin clearfix">
+									<dt>
+										<img src="//static.lagou.com/www/static/account-c/modules/common/img/icon-sina_e161002.png" alt="weibo">
+									</dt>
+									<dd>
+										<a href="https://passport.lagou.com/oauth20/auth_sinaWeiboProvider.html?state=bind">绑定新浪微博帐号</a>									</dd>
+								</dl>
+								<dl class="user_thirdLogin clearfix">
+									<dt>
+										<img src="//static.lagou.com/www/static/account-c/modules/common/img/icon-wechat_823d4eb.png" alt="weixin">									</dt>
+									<dd>
+										<a href="https://passport.lagou.com/oauth20/auth_weixinProvider.html?state=bind">绑定微信帐号</a>									</dd>
+								</dl>
+								<dl class="user_thirdLogin clearfix">
+									<dt>
+										<img src="//static.lagou.com/www/static/account-c/modules/common/img/icon-baidu_d1ad2b6.png" alt="baidu">									</dt>
+									<dd>
+										<a href="https://passport.lagou.com/oauth20/auth_baiduProvider.html?state=bind">绑定百度帐号</a>									</dd>
+								</dl>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<!--弹窗-->
+			<div id="cboxOverlay" style="opacity: 0.9;display: none;"></div>
+			<div id="colorbox" style="display: none; visibility: visible; top: 0px; left: 412px; position: absolute; width: 526px; height: 488px;">
+				<div id="cboxWrapper" style="height: 488px; width: 526px;">
+					<div>
+						<div id="cboxTopLeft" style="float: left;"></div>
+						<div id="cboxTopCenter" style="float: left; width: 500px;"></div>
+						<div id="cboxTopRight" style="float: left;"></div>
+					</div>
+					<div style="clear: left;">
+						<div id="cboxMiddleLeft" style="float: left; height: 462px;"></div>
+						<div id="cboxContent" style="float: left; width: 500px; height: 462px;">
+							<div id="cboxLoadedContent" style="width: 500px; overflow: hidden; height: 418px;">
+								<div id="changePhone" class="popup user_popup">
+									<p class="bding_title" style="margin-bottom:28px">验证你的手机号，完成手机帐号的绑定</p>
+									<div class="form_body clearfix" style="display: block;">
+										<div class="input_item clearfix" style="display: block;">
+											<span class="area_code">0086</span>
+											<div class="area_code_list" style="display: none;">
+    											<dl class="code_list_main"><dt>常用</dt><dd>中国<span>0086</span></dd><dd>中国香港<span>00852</span></dd><dd>中国台湾<span>00886</span></dd><dd>中国澳门<span>00853</span></dd><dd>美国<span>001</span></dd><dt>A</dt><dd>澳大利亚<span>0061</span></dd><dd>中国澳门<span>00853</span></dd><dt>B</dt><dd>巴西<span>0055</span></dd><dt>D</dt><dd>德国<span>0049</span></dd><dt>E</dt><dd>俄罗斯<span>007</span></dd><dt>F</dt><dd>法国<span>0033</span></dd><dt>H</dt><dd>韩国<span>0082</span></dd><dt>J</dt><dd>加拿大<span>001</span></dd><dt>M</dt><dd>马来西亚<span>0060</span></dd><dd>美国<span>001</span></dd><dt>R</dt><dd>日本<span>0081</span></dd><dt>T</dt><dd>中国台湾<span>00886</span></dd><dd>泰国<span>0066</span></dd><dt>X</dt><dd>中国香港<span>00852</span></dd><dd>新加坡<span>0065</span></dd><dt>Y</dt><dd>印度<span>0091</span></dd><dd>英国<span>0044</span></dd><dt>Z</dt><dd>中国<span>0086</span></dd></dl>
+    											<p class="tips">如果没有找到您的所在归属地，请拨打客服电话4006282835解决。</p>
+											</div>
+											<input type="text" class="input input_white input_warning" id="" name="" placeholder="请输入常用手机号" data-required="required" autocomplete="off">
+											<span data-valid-message="" class="input_tips">输入号码与归属地不匹配</span>
+										</div>
+										<div class="input_item clearfix"  style="display: block;">
+											<div class="input_group clearfix">
+												<input type="text" class="input input_white fl" name="" placeholder="请证明你不是机器人" data-required="required" autocomplete="off">
+												<img alt="点击重试" class="yzm" width="98" height="40" src="https://account.lagou.com/vcode/create?from=register&amp;refresh=1516426783908">
+												<a rel="nofollow" href="javascript:;" class="reflash"></a>
+											</div>
+										</div>
+										<div class="input_item" style="display: block;">
+											<div class="input_group clearfix">
+												<input type="text" class="input input_white first_child" id="" name="" placeholder="请输入验证码" data-required="required" autocomplete="off">
+												<input type="button" class="btn btn_green btn_active btn_lg last_child" value="获取验证码" data-required="required">
+											</div>
+											<span data-valid-message="" class="input_tips">请输入6位数字验证码</span>
+										</div>
+										<div class="input_item verify_tips" style="display: block;">
+                    						<p class="verify_tips_main">收不到短信？请使用
+                        						<input type="button" class="auto_phone" value="获取验证码">
+                    						</p>
+                    						<p class="verify_tips_count_down">语音发送成功</p>
+                						</div>
+                						<div class="input_item left clearfix"  style="display: block;">
+											<input type="button" class="btn btn_green btn_active btn_block btn_lg" value="完成绑定">
+										</div>
+										<div class="input_item left "  style="display: block;">
+											<input type="button" class="btn btn_link btn_lg" value="返回">
+										</div>
+									</div>
 								</div>
-								<div class="view_position">学生·成都理工大学</div>
-								<div class="view_introduce">我还没填写个人介绍</div>
 							</div>
-							<form id="userinfoEditForm">
-								<div class="avatar">
-									<img class="avatar_img" src="images/pic0.jpg" width="100" height="100" >
-									<input type="hidden" name="" value="">
-								</div>
-								<input type="file" class="avatar_upload" id="avatarUpload" name="headPic" defaultvalue="" title="支持jpg、jpeg、gif、png格式，文件小于10M">
-								<div class="username input_box">
-									<input type="text" id="userinfoEditUserName" name="userName" placeholder="请输入常用昵称" value="" maxlength="15" data-maxlength="15">
-								</div>
-								<div class="userinfo_sex input_box">
-									<input type="radio" class="magic-radio" id="userinfoEditSexMale" name="sex" value="MALE" checked="checked">
-									<label for="userinfoEditSexMale">男</label>
-									<input type="radio" class="magic-radio" id="userinfoEditSexFemale" name="sex" value="FEMALE">
-									<input type="radio" class="magic-radio" id="userinfoEditSexFemale" name="sex" value="FEMALE">
-								</div>
-								<div class="userinfo_job input_box">
-									<input type="text" id="userinfoEditPositionName" name="positionName" placeholder="请输入职业" value="学生·成都理工大学" maxlength="70" data-maxlength="70">
-								</div>
-								<div class="userinfo_intro input_box">
-									<input id="userinfoEditIntroduce" type="text" name="introduce" placeholder="个人介绍" value="我还没填写个人介绍">
-								</div>
-								<div class="toolbar">
-									<a class="btn userinfo_save" href="javascript:;" >保存</a>
-								</div>
-							</form>
-							<p class="tips">* 此信息用于站内言职社区功能，不会同步修改简历</p>
+							<div id="cboxTitle" style="float: left; display: block;">帐号绑定</div>
+							<button type="button" id="cboxClose">close</button>
 						</div>
+						<div id="cboxMiddleRight" style="float: left; height: 462px;"></div>
+					</div>
+					<div style="clear: left;">
+						<div id="cboxBottomLeft" style="float: left;"></div>
+						<div id="cboxBottomCenter" style="float: left; width: 500px;"></div>
+						<div id="cboxBottomRight" style="float: left;"></div>
 					</div>
 				</div>
 			</div>
@@ -554,11 +621,13 @@
             </div>
 			<script type="text/javascript">
 				$(document).ready(function(){
-				    $("#edit_link").click(function(){
-				      $(".hadInfo").hide();
+				    $("#cboxClose").click(function(){
+				      $("#colorbox").hide();
+				      $("#cboxOverlay").hide();
 				    });
-				    $("#edit_link").click(function(){
-				      $("#userinfoEditForm").show();
+				    $("#changePhoneBtn").click(function(){
+				      $("#colorbox").show();
+				      $("#cboxOverlay").show();
 				    });
 				});
 			</script>
