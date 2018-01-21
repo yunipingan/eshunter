@@ -285,3 +285,6 @@ button, input, optgroup, select, textarea {
     border-radius: 0;
     font-family: "Hiragino Sans GB","Microsoft Yahei",SimSun,Arial,"Helvetica Neue",Helvetica;
 }
+b, strong {
+    font-weight: 700;
+}
