@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="renderer" content="webkit">
+		<title>个人信息</title>
+		<link href="http://www.eshunter.com/favicon/favicon-16x16.png" rel="shortcut icon">
+		<link rel="stylesheet" type="text/css" href="css/recruit.css"/>
+		<link rel="stylesheet" type="text/css" href="css/restrict.css"/>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+		<script src="js/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<header id="top-header">
+			<div class="center">
+        		<span class="company-name">
+        			We
+        			<div class="heart">
+            			<svg version="1.1" viewBox="0 0 1024 1024" preserveAspectRatio="xMinYMin meet" class="svg-content" width="18" height="18">
+                			<path class="st0" d="M921.5,492.1L561.4,847.9c0,0-15.1,21.6-47.4,21.6s-47.4-21.6-47.4-21.6L106.3,492.1 c-41-43.1-66.9-99.2-66.9-163.9c0-129.4,105.7-235.1,232.9-235.1c64.7,0,122.9,25.9,163.9,66.9l75.5,86.3l75.5-86.3 c43.1-41,99.2-66.9,163.9-66.9c129.4,0,232.9,105.7,232.9,235.1C988.4,390.7,962.5,448.9,921.5,492.1L921.5,492.1z"></path>
+            			</svg>
+            		</div>
+            		<span class="name" data-name="店小二餐饮连锁公司">
+                                            店小二餐饮连锁公司
+            		</span>
+				</span>
+       			<span class="company-status left">
+       				<a href="#" target="_blank">未认证</a>
+       			</span>
+        		<nav class="top-navs">
+            		<ul class="clearfix">
+                		<li>
+                			<a href="#" class="" >首页</a>
+                		</li>
+               			<li>
+               				<a class="talents " href="#" >找人才</a>
+               				<span class="talent_msg"></span>
+               			</li>
+                		<li><a class="" href="#" >招聘</a>
+                			
+                		</li>
+					</ul>
+        		</nav>
+				<div class="preferences clearfix">
+					<div class="account-status right">
+						<a href="#" target="_blank">未审核</a>
+					</div>
+            		<div class="profile" >
+                		<span class="icon">
+                            <img src="images/1.gif">
+                        </span>
+                		<span class="name">陈XX</span>
+                		<i class="iconfont icon-daosanjiao"></i>
+						<ul class="options  options-wide ">
+                    		<li>
+                    			<a class="company-page" href="#" target="_blank" >公司主页</a>
+                    		</li>
+                    		<li>
+                    			<a href="#" >招聘设置</a>
+                    		</li>
+                    		<li>
+                    			<a class="help" href="#" target="_blank" >帮助中心</a>
+                    		</li>
+                    		<li>
+                    			<a id="logoutNode" >退出</a>
+                    		</li>
+                		</ul>
+	            	</div>
+	            	<div class="msg-bell">
+	                	<i class="bell-icon iconfont icon-lingdang-xianxing" ></i>
+	                	<span class="badge" style="display: none;"></span>
+						<div class="messages">
+	                    	<header>
+	                        	<span class="left">通知</span>
+	                        	<span class="all-readed">全部标记为已读</span>
+	                    	</header>
+							<ul class="msg-list">
+								<li>
+									<p class="empty">- 没有新通知 -</p>
+								</li>
+							</ul>
+							<footer>
+								<a href="#" target="_blank">查看全部</a>
+							</footer>
+	                	</div>
+	            	</div>
+	                <a class="lagou-servic" href="#" target="_blank" >招聘解决方案</a>
+	                <div class="msg-point">
+	                	<a href="#" class="point-notice"></a>
+	            	</div>
+            	</div>
+    		</div>
+		</header>
+		<div id="main-content-wrapper">
+			<div class="container">
+				<div class="setting-pannel">
+					<div class="head">
+                		<div class="title">招聘设置</div>
+            		</div>
+            		<div class="menu-container head-son clearfix" id="account-menu">
+                		<div class="set-tab">
+                    		<span class="menu-item active info">个人信息</span>
+                    		<span class="divider"></span>
+                    		<span class="menu-item pid">身份认证</span>
+                       </div>
+            		</div>
+            		<div class="setting-container infoSet" id="account-container">
+            			<div class="setting-item" data-view="myinfoView">
+		                    <div class="form-item clearfix">
+		                        <label class="left label-pic">头像</label>
+		                        <div class="upload-img left">
+		                            <img src="images/1.gif" alt="头像" class="show_img">
+		                            <label for="uploadPublisherAvatar" class="upload-file"></label>
+		                            <!-- <span class="alt-file-btn">更换头像</span> -->
+		                            <input type="file" id="uploadPublisherAvatar" name="headPic">
+		                            <input type="hidden" id="myinfo-portrait-input" name="portrait" value="1.gif">
+		                        </div>
+		                        <div class="upload-img-des left">
+		                            <p>支持jpg、jpeg、gif、png图片文件</p>
+		                            <p>图片尺寸：120px*120px</p>
+		                            <p>图片大小需小于10MB</p>
+		                        </div>
+		                    </div>
+		                    <div class="form-item">
+		                        <label for="" class="name-info">姓名</label>
+		                        <div class="form-input" data-propertyname="name">
+		                            <input type="text" id="myinfo-name-input" name="name" class="input input_white" placeholder="请填写你的常用名" value="陈世松">
+		                        </div>
+		                    </div>
+		
+		                    <div class="form-item">
+		                        <label for="" class="hrName4JD">称呼</label>
+		                        <div class="form-input" data-propertyname="hrName4JD">
+		                            <input type="text" id="myinfo-hrName4JD-input" name="hrName4JD" class="input input_white" placeholder="请填写你的称呼" value="陈世松">
+		                            <div class="input-tips hrName">*用于向求职者展示</div>
+		                        </div>
+		
+		                    </div>
+		
+		                    <div class="form-item">
+		                        <label for="">职位</label>
+		                        <div class="form-input" data-propertyname="title">
+		                            <input type="text" id="myinfo-title-input" name="title" class="input input_white" placeholder="请填写你的职位" value="老板">
+		                        </div>
+		                    </div>
+		                    <div class="form-item">
+		                        <label for="">部门</label>
+		                        <div class="form-input" data-propertyname="department">
+		                            <input type="text" id="myinfo-department-input" name="department" class="input input_white" placeholder="请填写你的部门" value="">
+		                        </div>
+		                    </div>
+		                    <div class="form-item">
+		                        <label for="" class="phone-info">手机</label>
+		                        <div class="form-input" data-propertyname="phone">
+		                            <input type="text" id="myinfo-phone-input" name="phone" class="input input_white" placeholder="手机号，不会公布给候选人" value="15608003358">
+		                            <div class="input-tips phone-input-tips">*用于电话呼叫</div>
+		                        </div>
+		                    </div>
+		                    <div class="form-item">
+		                        <label for="" class="email-tip">邮箱</label>
+		                        <div class="form-input email-input" data-propertyname="email">
+		                            <input type="text" id="myinfo-email-input" name="email" class="input input_white" placeholder="该邮箱用于接收简历" value="" maxlength="100">
+		                            <div class="input-tips email-input-tips">*用于接收简历</div>
+		                        </div>
+		                    </div>
+		                    <div class="form-item" data-propertyname="submit">
+		                        <label for=""></label>
+		                        <button id="myinfo-save-button" name="submit" class="btn btn_green btn_active">保存</button>
+		                    </div>
+		                    <div class="footer-menu clearfix">
+		                        <div class="set-tab">
+		                            <a href="updatePwd.html" target="_blank"><span class="menu-item">修改密码<span class="mds-setting-quot"></span></span></a>
+		                            <!-- <span class="divider"></span> -->
+		                        </div>
+		                    </div>
+		                </div>
+            		</div>
+            		<!--身份验证-->
+            		<div class="setting-container pidSet" id="account-container" style="display: none;>
+                		<div class="setting-item" data-view="myinfoView">
+                    		<div class="setting-content">
+                                <div id="pIdContent">
+									<div class="headline">
+										<span class="green"></span>
+										<span class="headline_name">招聘者身份审核</span>
+									</div>
+									<div class="person_content">
+										<div class="head_img">
+											<div class="img_bd">
+												<img src="images/1.gif" width="82" height="82">
+											</div>
+											<div class="p_sign_nopass">审核未通过</div>
+										</div>
+										<ul class="info_list">
+											<li><span class="li_title">姓名</span><span class="li_word">陈世松</span></li>
+											<li><span class="li_title">职位</span><span class="li_word">老板</span></li>
+											<li><span class="li_title">公司</span><span class="li_word">店小二</span></li>
+										</ul>
+		
+										<div class="button_bd">
+											<a href="status.html" target="_blank">查看审核详情</a>
+											<div class="tip_list person_list">
+												<span class="tip_icon">i</span>
+												<span class="list_arrow person_tip"></span>
+												<ul>
+													<li><span class="point"></span><span class="lists">发布更多职位</span></li>
+													<li><span class="point"></span><span class="lists">增加职位曝光</span></li>
+													<li><span class="point"></span><span class="lists">信息更加可靠</span></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+
+                                <div id="companyContent" data-companyid="316493">
+									<div class="headline">
+										<span class="green"></span>
+										<span class="headline_name">公司认证</span>
+									</div>
+									<div class="company_content">
+										<div class="head_img">
+											<div class="img_bd">
+												<img src="images/1.gif">
+											</div>
+														<div class="p_sign">未认证</div>
+													</div>
+										<ul class="info_list">
+											<li><span class="li_title">公司全称</span><span class="li_word">店小二</span></li>
+											<li><span class="li_title">公司简称</span><span class="li_word">店小二餐饮连锁公司</span></li>
+											<li><span class="li_title">行业领域</span><span class="li_word">生活服务,其他</span></li>
+											<li><span class="li_title">公司规模</span><span class="li_word">15-50人</span></li>
+											<li><span class="li_title">发展阶段</span><span class="li_word">未融资</span></li>
+										</ul>
+										<div class="button_bd">
+											<a href="javascript:;" class="not_complete">请先完成招聘者身份审核</a>
+											<div class="tip_list company_list">
+												<span class="tip_icon">i</span>
+												<span class="list_arrow company_tip"></span>
+												<ul>
+													<li><span class="point"></span><span class="lists">更加完善的公司主页</span></li>
+													<li><span class="point"></span><span class="lists">增加公司主页的曝光</span></li>
+													<li><span class="point"></span><span class="lists">更加完美的雇主形象</span></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+
+                    		</div>
+
+                		</div>
+            		</div>
+				</div>
+			</div>
+		</div>
+    	<script type="text/javascript">
+    		$(document).ready(function(){
+			  $("span.name").click(function(){
+			  	$(".options-wide").toggle();
+			  });
+			  $("i.bell-icon").click(function(){
+			  	$(".messages").toggle();
+			  });
+			  $(".person_list .tip_icon").hover(function(){
+			  	$(".person_tip").css("display","block");
+			  	$(".person_list ul").css("display","block");
+			  },function(){
+			  	$(".person_tip").css("display","none");
+			  	$(".person_list ul").css("display","none");
+			  });
+			  $(".company_list .tip_icon").hover(function(){
+			  	$(".company_tip").css("display","block");
+			  	$(".company_list ul").css("display","block");
+			  },function(){
+			  	$(".company_tip").css("display","none");
+			  	$(".company_list ul").css("display","none");
+			  });
+			  $(".set-tab span.info").click(function(){
+			  	$("div.infoSet").show();
+			  	$("div.pidSet").hide();
+			  })
+			  $(".set-tab span.pid").click(function(){
+			  	$("div.pidSet").show();
+			  	$("div.infoSet").hide();
+			  })
+			});
+    	</script>
+	</body>
+</html>
