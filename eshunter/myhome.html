@@ -135,11 +135,15 @@
 							
 							    <label>
 							        <span class="redstar">*</span>
-							        <input type="text" class="companyUrl" name="companyUrl" value="https://www.lagou.com/gongsi/316493.html" placeholder="请输入公司网站" autocomplete="off">
+							        <input type="text" class="companyUrl" name="companyUrl" value="" placeholder="请输入公司网站" autocomplete="off">
 							    </label>
 							
 							    <input type="hidden" class="companyName" name="companyName" value="店小二">
-							    <div class="longname"><span>店小二</span><span class="tips">（修改公司全称或简称，请发送邮件至gogo@lagou.com）</span><a class="tips_link" href="https://yanzhi.lagou.com/question/61953.html" target="_blank"><i class="icon-glyph-question"></i> 如何发送</a></div>
+							    <div class="longname"><span>店小二</span><span class="tips">（修改公司全称或简称，请发送邮件至gogo@lagou.com）</span>
+							    	<a class="tips_link" href="#" target="_blank">
+							    		<i class="icon-glyph-question"></i> 
+							    		如何发送</a>
+							    </div>
 							
 							    <label class="edit_wrap">
 							        <span class="redstar">*</span>
@@ -157,22 +161,22 @@
 				<div id="company_navs" class="company_navs">
 				    <div class="company_navs_wrap">
 				        <ul data-pjax="">
-				            <li class="current">
-				                <a href="https://hr.lagou.com/company/gongsi/316493.html" data-lg-tj-id="9100" data-lg-tj-no="0001" data-lg-tj-cid="idnull">公司主页</a>
+				            <li class="li_one current">
+				                <a href="javascript:;" class="company_index">公司主页</a>
 				            </li>
-				            <li>
-				                <a href="https://hr.lagou.com/company/gongsi/j316493.html" data-lg-tj-id="9100" data-lg-tj-no="0002" data-lg-tj-cid="idnull">招聘职位（0）</a>
+				            <li class="li_two">
+				                <a href="javascript:;" class="recruit_job">招聘职位（0）</a>
 				            </li>
-				                        <li>
-				                <a href="https://hr.lagou.com/company/gongsi/q316493.html" data-lg-tj-id="9100" data-lg-tj-no="0004" data-lg-tj-cid="idnull">公司问答</a>
+				            <li class="li_three">
+				                <a href="javascript:;" class="company_ask">公司问答</a>
 				                <i class="icon_new"></i>
 				            </li>
 				        </ul>
 				        <div class="company_share">
 				            <span>分享</span>
-				            <a href="javascript:;" class="share_weibo" rel="nofollow" title="分享到微博" data-lg-tj-id="19vs" data-lg-tj-no="0001" data-lg-tj-cid="316493"></a>
-				            <a href="javascript:;" class="share_weixin" rel="nofollow" title="分享到微信" data-lg-tj-id="19vs" data-lg-tj-no="0002" data-lg-tj-cid="316493"></a>
-				            <a href="javascript:;" class="share_rountline" rel="nofollow" title="微信扫一扫，用小程序打开分享" data-lg-tj-id="19vs" data-lg-tj-no="0003" data-lg-tj-cid="316493"></a>
+				            <a href="javascript:;" class="share_weibo" rel="nofollow" title="分享到微博" ></a>
+				            <a href="javascript:;" class="share_weixin" rel="nofollow" title="分享到微信" ></a>
+				            <a href="javascript:;" class="share_rountline" rel="nofollow" title="微信扫一扫，用小程序打开分享" ></a>
 				            <div class="share_weixin_success" id="companyQrcode">
 				                <!-- <img alt="移动端公司主页二维码" /> -->
 				                <div class="qrcode_box">
@@ -191,40 +195,40 @@
 				<div class="company_navs_shadow"></div>
 				<div id="main_container">
 			        <div id="container_left">
-			            <div id="containerCompanyDetails">
+			            <div id="containerCompanyDetails" class="companyIndex" style="display: block;">
 							<div class="item_container" id="company_products">
 							    <div class="item_ltitle">公司产品</div>
 							
-							    <span class="item_ropera item_add disabled" style="display: none;">
+							    <span class="item_ropera item_add disabled add_btn_wrap" style="display: block;">
 							        <em class="item_ropeiconp"></em>
-							        <span class="item_ropetext">新增</span>
+							        <span class="item_ropetext add_one">新增</span>
 							    </span>
 							    
-							    <div class="item_content"  style="display: none;">
+							    <div class="item_content item_content_one"  style="display: block;">
 							        <div class="item_empty">
 							            <p class="item_empty_desc">
 							                简洁有趣的产品介绍，能让用户最快速度了解公司业务。把自家优秀的产品展示出来吸引人才围观吧！
 							            </p>
 							            <p class="item_empty_add item_add disabled">
 							                <em class="item_ropeiconp"></em>
-							                <span class="item_ropetext">添加公司产品</span>
+							                <span class="item_ropetext add_product">添加公司产品</span>
 							            </p>
 							        </div>
 							    </div>
-							    <div class="item_content" style="display: block;">
+							    <div class="item_content item_content_one_edit" style="display: none;">
 							    	<div class="item_content_edit_wrap product_item">
 								    <div class="product_edit_tip">
 								        简洁有趣的产品介绍，能让应聘者以最快的速度了解公司业务。
 								    </div>
-								    <span class="item_ropera1 item_ropera_cancel item_cancel_add" style="display: block;">
+								    <span class="item_ropera1 item_ropera_cancel item_cancel_add" style="display: none;">
 								        <em class="item_ropeiconp item_ropeicons"></em>
-								        <span class="item_ropetext">取消新增</span>
+								        <span class="item_ropetext cancel_add_one">取消新增</span>
 								    </span>
 								    <div class="item_content_edit">
 								        <form id="productForm" data-id="" action="javascript:;" method="post" novalidate="novalidate">
 								            <div class="upload_product_img">
 								                
-								                    <img src="//www.lgstatic.com/hr/static/company/modules/products/img/product_default_1021398.png" alt="产品图片">
+								                    <img src="images/product_default_1021398.png" alt="产品图片">
 								                
 								                <div class="shadow"></div>
 								                <div class="text">
@@ -264,17 +268,19 @@
 								                            </li>
 								                        
 								                    </ul>
+								                    <span id="productType-error" class="error" style="display: none;">请选择产品类型</span>
 								                </label>
 								                <label>
 								                    <input type="text" name="productUrl" class="productUrl" value="" autocomplete="off" placeholder="请输入产品主页或产品下载地址">
 								                </label>
 								                <label>
-								                    <div class="edui-container" style="width: 345px; z-index: 999;"><div class="edui-toolbar"><div class="edui-btn-toolbar" unselectable="on" onmousedown="return false"><div class="edui-btn edui-btn-fullscreen" unselectable="on" onmousedown="return false" data-original-title="全屏"> <div unselectable="on" class="edui-icon-fullscreen edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-source" unselectable="on" onmousedown="return false" data-original-title="源代码"> <div unselectable="on" class="edui-icon-source edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-separator" unselectable="on" onmousedown="return false"></div><div class="edui-btn edui-btn-undo  edui-disabled" unselectable="on" onmousedown="return false" data-original-title="撤销"> <div unselectable="on" class="edui-icon-undo edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-redo  edui-disabled" unselectable="on" onmousedown="return false" data-original-title="重做"> <div unselectable="on" class="edui-icon-redo edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-separator" unselectable="on" onmousedown="return false"></div><div class="edui-btn edui-btn-bold" unselectable="on" onmousedown="return false" data-original-title="加粗"> <div unselectable="on" class="edui-icon-bold edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-italic" unselectable="on" onmousedown="return false" data-original-title="斜体"> <div unselectable="on" class="edui-icon-italic edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-underline" unselectable="on" onmousedown="return false" data-original-title="下划线"> <div unselectable="on" class="edui-icon-underline edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-strikethrough" unselectable="on" onmousedown="return false" data-original-title="删除线"> <div unselectable="on" class="edui-icon-strikethrough edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-separator" unselectable="on" onmousedown="return false"></div><div class="edui-btn edui-btn-superscript" unselectable="on" onmousedown="return false" data-original-title="上标"> <div unselectable="on" class="edui-icon-superscript edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-subscript" unselectable="on" onmousedown="return false" data-original-title="下标"> <div unselectable="on" class="edui-icon-subscript edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-separator" unselectable="on" onmousedown="return false"></div><div class="edui-splitbutton edui-splitbutton-forecolor" unselectable="on" data-original-title="字体颜色"><div class="edui-btn" unselectable="on"><div unselectable="on" class="edui-icon-forecolor edui-icon"></div><div class="edui-splitbutton-color-label"></div></div><div unselectable="on" class="edui-btn edui-dropdown-toggle"><div unselectable="on" class="edui-caret"></div></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-splitbutton edui-splitbutton-backcolor" unselectable="on" data-original-title="背景色"><div class="edui-btn" unselectable="on"><div unselectable="on" class="edui-icon-backcolor edui-icon"></div><div class="edui-splitbutton-color-label"></div></div><div unselectable="on" class="edui-btn edui-dropdown-toggle"><div unselectable="on" class="edui-caret"></div></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-separator" unselectable="on" onmousedown="return false"></div><div class="edui-btn edui-btn-removeformat" unselectable="on" onmousedown="return false" data-original-title="清除格式"> <div unselectable="on" class="edui-icon-removeformat edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-separator" unselectable="on" onmousedown="return false"></div><div class="edui-btn edui-btn-insertorderedlist" unselectable="on" onmousedown="return false" data-original-title="有序列表"> <div unselectable="on" class="edui-icon-insertorderedlist edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-insertunorderedlist" unselectable="on" onmousedown="return false" data-original-title="无序列表"> <div unselectable="on" class="edui-icon-insertunorderedlist edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-separator" unselectable="on" onmousedown="return false"></div><div class="edui-btn edui-btn-selectall" unselectable="on" onmousedown="return false" data-original-title="全选"> <div unselectable="on" class="edui-icon-selectall edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-cleardoc" unselectable="on" onmousedown="return false" data-original-title="清空文档"> <div unselectable="on" class="edui-icon-cleardoc edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn- edui-btn-name-paragraph edui-combobox" unselectable="on" onmousedown="return false" data-original-title="段落格式"> <span unselectable="on" onmousedown="return false" class="edui-button-label">段落格式</span><span class="edui-button-spacing"></span><span unselectable="on" onmousedown="return false" class="edui-caret"></span><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-separator" unselectable="on" onmousedown="return false"></div><div class="edui-btn edui-btn- edui-btn-name-fontfamily edui-combobox" unselectable="on" onmousedown="return false" data-original-title="字体"> <span unselectable="on" onmousedown="return false" class="edui-button-label">arial</span><span class="edui-button-spacing"></span><span unselectable="on" onmousedown="return false" class="edui-caret"></span><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn- edui-btn-name-fontsize edui-combobox" unselectable="on" onmousedown="return false" data-original-title="字号"> <span unselectable="on" onmousedown="return false" class="edui-button-label">字号</span><span class="edui-button-spacing"></span><span unselectable="on" onmousedown="return false" class="edui-caret"></span><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-separator" unselectable="on" onmousedown="return false"></div><div class="edui-btn edui-btn-justifyleft" unselectable="on" onmousedown="return false" data-original-title="居左对齐"> <div unselectable="on" class="edui-icon-justifyleft edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-justifycenter" unselectable="on" onmousedown="return false" data-original-title="居中对齐"> <div unselectable="on" class="edui-icon-justifycenter edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-justifyright" unselectable="on" onmousedown="return false" data-original-title="居右对齐"> <div unselectable="on" class="edui-icon-justifyright edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-separator" unselectable="on" onmousedown="return false"></div><div class="edui-btn edui-btn-link" unselectable="on" onmousedown="return false" data-original-title="超链接"> <div unselectable="on" class="edui-icon-link edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-unlink" unselectable="on" onmousedown="return false" data-original-title="取消链接"> <div unselectable="on" class="edui-icon-unlink edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-separator" unselectable="on" onmousedown="return false"></div><div class="edui-btn edui-btn-emotion" unselectable="on" onmousedown="return false" data-original-title="表情"> <div unselectable="on" class="edui-icon-emotion edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-image" unselectable="on" onmousedown="return false" data-original-title="图片"> <div unselectable="on" class="edui-icon-image edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-video" unselectable="on" onmousedown="return false" data-original-title="视频"> <div unselectable="on" class="edui-icon-video edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-separator" unselectable="on" onmousedown="return false"></div><div class="edui-btn edui-btn-map" unselectable="on" onmousedown="return false" data-original-title="百度地图"> <div unselectable="on" class="edui-icon-map edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-separator" unselectable="on" onmousedown="return false"></div><div class="edui-btn edui-btn-horizontal" unselectable="on" onmousedown="return false" data-original-title="分隔线"> <div unselectable="on" class="edui-icon-horizontal edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-print" unselectable="on" onmousedown="return false" data-original-title="打印"> <div unselectable="on" class="edui-icon-print edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-preview" unselectable="on" onmousedown="return false" data-original-title="预览"> <div unselectable="on" class="edui-icon-preview edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-drafts" unselectable="on" onmousedown="return false" data-original-title="草稿箱"> <div unselectable="on" class="edui-icon-drafts edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-formula" unselectable="on" onmousedown="return false" data-original-title="数学公式"> <div unselectable="on" class="edui-icon-formula edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false" style="z-index: 1000;"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div></div><div class="edui-dialog-container"></div></div><div class="edui-editor-body"><div class="form_item form_digest edui-body-container" contenteditable="true" style="width: 315px; min-height: 130px; z-index: 999;"><p><span data-tag="zns6GSI672389sdnxzcxxz" style="font-size:14px;color:#a9a9a9;padding-left:5px;">请简短描述该产品定位、产品特点、用户群体等</span></p></div><textarea id="product_digest" class="form_item form_digest valid" name="product_digest" style="height: 150px; display: none;" aria-invalid="false"></textarea></div></div>
+								                    <div class="edui-container" style="width: 345px; z-index: 999;">
+								                    </div>
 								                    <span class="wordcount">还可输入<b>200</b>字</span>
 								                </label>
 								                <span class="error products_all" style="display:none;"></span>
 								                <input type="submit" value="保存" class="save">
-								                <a href="javascript:;" class="cancel">取消</a>
+								                <a href="javascript:;" class="cancel cancel_btn_one">取消</a>
 								                
 								            </div>
 								        </form>
@@ -290,16 +296,16 @@
 							                                    
 							            </video>
 							    </div> 
-							        <span class="item_ropera disabled" style="display:none;">
+							    <span class="item_ropera disabled" style="display:none;">
 							        <em class="item_ropeiconp item_ropeicone"></em>
 							        <span class="item_ropetext">编辑</span>
 							    </span>
 							    <span class="item_ropera item_add disabled">
 							        <em class="item_ropeiconp"></em>
-							        <span class="item_ropetext">新增</span>
+							        <span class="item_ropetext add_two" >新增</span>
 							    </span>
 							    
-							    <div class="item_content" style="display: none;">
+							    <div class="item_content item_content_two" style="display: block;">
 							        <div class="company_intro_text" style="display: block;">该公司尚未添加公司介绍<br></div>
 							        <div class="company_image_gallery">
 							                        <div class="item_empty">
@@ -308,25 +314,25 @@
 							                </p>
 							                <p class="item_empty_add disabled">
 							                    <em class="item_ropeiconp"></em>
-							                    <span class="item_ropetext">添加公司照片</span>
+							                    <span class="item_ropetext add_image">添加公司照片</span>
 							                </p>
 							            </div>
 							                    </div>
 							    </div>
 							
-							    <div class="item_content_edit_wrap">
+							    <div class="item_content_edit_wrap item_content_add_wrap" style="display: none;">
 							    	<div class="company_edit_tip">
    										 对公司详尽又生动的图文介绍，是吸引应聘者的最佳利器。
 									</div>
-									<span class="item_ropera1 item_ropera_cancel" style="display: block;">
+									<span class="item_ropera1 item_ropera_cancel item_ropera1_content" style="display: none;">
 
     									<em class="item_ropeiconp item_ropeicons"></em>
-									    <span class="item_ropetext">取消新增</span>
+									    <span class="item_ropetext cancel_add_two">取消新增</span>
 									</span>
-									<div class="item_content_edit">
+									<div class="item_content_edit item_content_edit_two" style="display: none;">
 									    <form id="introForm" action="javascript:;" method="post" novalidate="novalidate">
 									        <label>
-									            <div class="edui-container" style="width: 676px; z-index: 999;"><div class="edui-toolbar"><div class="edui-btn-toolbar" unselectable="on" onmousedown="return false"><div class="edui-btn edui-btn-fullscreen" unselectable="on" onmousedown="return false" data-original-title="全屏"> <div unselectable="on" class="edui-icon-fullscreen edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-source" unselectable="on" onmousedown="return false" data-original-title="源代码"> <div unselectable="on" class="edui-icon-source edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-separator" unselectable="on" onmousedown="return false"></div><div class="edui-btn edui-btn-undo  edui-disabled" unselectable="on" onmousedown="return false" data-original-title="撤销"> <div unselectable="on" class="edui-icon-undo edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-redo  edui-disabled" unselectable="on" onmousedown="return false" data-original-title="重做"> <div unselectable="on" class="edui-icon-redo edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-separator" unselectable="on" onmousedown="return false"></div><div class="edui-btn edui-btn-bold" unselectable="on" onmousedown="return false" data-original-title="加粗"> <div unselectable="on" class="edui-icon-bold edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-italic" unselectable="on" onmousedown="return false" data-original-title="斜体"> <div unselectable="on" class="edui-icon-italic edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-underline" unselectable="on" onmousedown="return false" data-original-title="下划线"> <div unselectable="on" class="edui-icon-underline edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-strikethrough" unselectable="on" onmousedown="return false" data-original-title="删除线"> <div unselectable="on" class="edui-icon-strikethrough edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-separator" unselectable="on" onmousedown="return false"></div><div class="edui-btn edui-btn-superscript" unselectable="on" onmousedown="return false" data-original-title="上标"> <div unselectable="on" class="edui-icon-superscript edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-subscript" unselectable="on" onmousedown="return false" data-original-title="下标"> <div unselectable="on" class="edui-icon-subscript edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-separator" unselectable="on" onmousedown="return false"></div><div class="edui-splitbutton edui-splitbutton-forecolor" unselectable="on" data-original-title="字体颜色"><div class="edui-btn" unselectable="on"><div unselectable="on" class="edui-icon-forecolor edui-icon"></div><div class="edui-splitbutton-color-label"></div></div><div unselectable="on" class="edui-btn edui-dropdown-toggle"><div unselectable="on" class="edui-caret"></div></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-splitbutton edui-splitbutton-backcolor" unselectable="on" data-original-title="背景色"><div class="edui-btn" unselectable="on"><div unselectable="on" class="edui-icon-backcolor edui-icon"></div><div class="edui-splitbutton-color-label"></div></div><div unselectable="on" class="edui-btn edui-dropdown-toggle"><div unselectable="on" class="edui-caret"></div></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-separator" unselectable="on" onmousedown="return false"></div><div class="edui-btn edui-btn-removeformat" unselectable="on" onmousedown="return false" data-original-title="清除格式"> <div unselectable="on" class="edui-icon-removeformat edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-separator" unselectable="on" onmousedown="return false"></div><div class="edui-btn edui-btn-insertorderedlist" unselectable="on" onmousedown="return false" data-original-title="有序列表"> <div unselectable="on" class="edui-icon-insertorderedlist edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-insertunorderedlist" unselectable="on" onmousedown="return false" data-original-title="无序列表"> <div unselectable="on" class="edui-icon-insertunorderedlist edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-separator" unselectable="on" onmousedown="return false"></div><div class="edui-btn edui-btn-selectall" unselectable="on" onmousedown="return false" data-original-title="全选"> <div unselectable="on" class="edui-icon-selectall edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-cleardoc" unselectable="on" onmousedown="return false" data-original-title="清空文档"> <div unselectable="on" class="edui-icon-cleardoc edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn- edui-btn-name-paragraph edui-combobox" unselectable="on" onmousedown="return false" data-original-title="段落格式"> <span unselectable="on" onmousedown="return false" class="edui-button-label">段落格式</span><span class="edui-button-spacing"></span><span unselectable="on" onmousedown="return false" class="edui-caret"></span><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-separator" unselectable="on" onmousedown="return false"></div><div class="edui-btn edui-btn- edui-btn-name-fontfamily edui-combobox" unselectable="on" onmousedown="return false" data-original-title="字体"> <span unselectable="on" onmousedown="return false" class="edui-button-label">arial</span><span class="edui-button-spacing"></span><span unselectable="on" onmousedown="return false" class="edui-caret"></span><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn- edui-btn-name-fontsize edui-combobox" unselectable="on" onmousedown="return false" data-original-title="字号"> <span unselectable="on" onmousedown="return false" class="edui-button-label">字号</span><span class="edui-button-spacing"></span><span unselectable="on" onmousedown="return false" class="edui-caret"></span><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-separator" unselectable="on" onmousedown="return false"></div><div class="edui-btn edui-btn-justifyleft" unselectable="on" onmousedown="return false" data-original-title="居左对齐"> <div unselectable="on" class="edui-icon-justifyleft edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-justifycenter edui-active" unselectable="on" onmousedown="return false" data-original-title="居中对齐"> <div unselectable="on" class="edui-icon-justifycenter edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-justifyright" unselectable="on" onmousedown="return false" data-original-title="居右对齐"> <div unselectable="on" class="edui-icon-justifyright edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-separator" unselectable="on" onmousedown="return false"></div><div class="edui-btn edui-btn-link" unselectable="on" onmousedown="return false" data-original-title="超链接"> <div unselectable="on" class="edui-icon-link edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-unlink" unselectable="on" onmousedown="return false" data-original-title="取消链接"> <div unselectable="on" class="edui-icon-unlink edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-separator" unselectable="on" onmousedown="return false"></div><div class="edui-btn edui-btn-emotion" unselectable="on" onmousedown="return false" data-original-title="表情"> <div unselectable="on" class="edui-icon-emotion edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-image" unselectable="on" onmousedown="return false" data-original-title="图片"> <div unselectable="on" class="edui-icon-image edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-video" unselectable="on" onmousedown="return false" data-original-title="视频"> <div unselectable="on" class="edui-icon-video edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-separator" unselectable="on" onmousedown="return false"></div><div class="edui-btn edui-btn-map" unselectable="on" onmousedown="return false" data-original-title="百度地图"> <div unselectable="on" class="edui-icon-map edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-separator" unselectable="on" onmousedown="return false"></div><div class="edui-btn edui-btn-horizontal" unselectable="on" onmousedown="return false" data-original-title="分隔线"> <div unselectable="on" class="edui-icon-horizontal edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-print" unselectable="on" onmousedown="return false" data-original-title="打印"> <div unselectable="on" class="edui-icon-print edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-preview" unselectable="on" onmousedown="return false" data-original-title="预览"> <div unselectable="on" class="edui-icon-preview edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-drafts  edui-disabled" unselectable="on" onmousedown="return false" data-original-title="草稿箱"> <div unselectable="on" class="edui-icon-drafts edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-formula" unselectable="on" onmousedown="return false" data-original-title="数学公式"> <div unselectable="on" class="edui-icon-formula edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false" style="z-index: 1000;"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div></div><div class="edui-dialog-container"></div></div><div class="edui-editor-body"><div class="form_item intro_digest edui-body-container" contenteditable="true" style="width: 646px; min-height: 130px; z-index: 999;"><p><span data-tag="zns6GSI672389sdnxzcxxz" style="font-size:14px;color:#a9a9a9;padding-left:5px;">请描述公司简介、企业文化、公司愿景等</span></p></div><textarea id="intro_digest" class="form_item intro_digest valid" name="intro_digest" style="width: 100%; height: 150px; display: none;" aria-invalid="false"></textarea></div></div>
+									            <div class="edui-container" style="width: 676px; z-index: 999;"></div>
 									            <span class="wordcount">还可输入<b>1000</b>字</span>
 									        </label>
 									        <div class="company_images_count">最多可上传10张照片，已上传 <span>(<i>0</i>/10)</span></div>
@@ -342,7 +348,7 @@
 									                        尺寸：480px*340px
 									                    </span>
 									                    <label class="upload-file-wrap">
-									                        <input type="file" id="uploadIntroImg" name="filePic">
+									                        <input type="file" id="uploadIntroImg" name="filePic" >
 									                    </label>
 									                </div>
 									            </li>
@@ -350,7 +356,7 @@
 									        </ul>
 									        <span class="error cmpintro_all" style="display:none;"></span>
 									        <input type="submit" value="保存" class="save">
-									        <a href="javascript:;" class="cancel">取消</a>
+									        <a href="javascript:;" class="cancel cancel_btn_two">取消</a>
 									    </form>
 									</div>
 							    </div>
@@ -359,16 +365,16 @@
 							<div class="item_container" id="history_container">
 							    <div class="item_ltitle">发展历程</div>
 							
-							    <span class="item_ropera item_add disabled" style="display: none;">
+							    <span class="item_ropera item_add disabled item_add_wrap_three" style="display: block;">
 							        <em class="item_ropeiconp"></em>
-							        <span class="item_ropetext">新增</span>
+							        <span class="item_ropetext add_three">新增</span>
 							    </span>
 							    
 							    <!-- 编辑区域 -->
-							    <div class="item_content_edit_wrap" style="display: block;">
+							    <div class="item_content_edit_wrap item_content_edit_three" style="display: none;">
 							    	<span class="item_ropera1 item_ropera_cancel">
 									    <em class="item_ropeiconp item_ropeicons"></em>
-									    <span class="item_ropetext">取消新增</span>
+									    <span class="item_ropetext cancel_add_three">取消新增</span>
 									</span>
 									<div class="his_tip">向应聘者展示公司和产品不断壮大过程中的里程碑事件。</div>
 									<form class="item_content_edit common_form history_form" action="javascript:;" method="post" novalidate="novalidate">
@@ -383,13 +389,13 @@
 									            <span class="redstar">*</span>
 									            <div class="simulate_select select_eventtype">
 									                <input type="hidden" class="eventtype" id="eventtype" name="eventtype" value="">
-									                <span class="eventtip">
+									                <span class="eventtip eventTipOne">
 									                    
 									                        选择事件类型
 									                    
 									                </span>
-									                <i></i>
-									                <ul style="display: none;">
+									                <i class="idropdown"></i>
+									                <ul class="eventUlOne" style="display: none;">
 									                    
 									                    <li>产品</li>
 									                    
@@ -462,13 +468,13 @@
 									    <input type="hidden" name="id" value="">
 									    <span class="error history_all" style="display:none;"></span>
 									    <input type="submit" value="保存" class="save">
-									    <a href="javascript:;" class="cancel">取消</a>
+									    <a href="javascript:;" class="cancel cancel_btn_three">取消</a>
 									    
 									</form>
 							    </div>
 							
 							    <!-- 展示区域 -->
-							    <div class="item_content" style="display: none;">
+							    <div class="item_content item_content_three" style="display: block;">
 							            <!-- 空 -->
 							        <div class="item_empty item_add">
 							            <p class="item_empty_desc">
@@ -476,7 +482,7 @@
 							            </p>
 							            <p class="item_empty_add disabled">
 							                <em class="item_ropeiconp"></em>
-							                <span class="item_ropetext">添加发展历程</span>
+							                <span class="item_ropetext add_process">添加发展历程</span>
 							            </p>
 							        </div>
 							        </div>
@@ -530,7 +536,7 @@
 							        	<div style="display: none;"></div>
 							        	<div class="amap-controls"></div>
 							        	<a class="amap-logo" href="http://gaode.com" target="_blank">
-							        		<img src="https://webapi.amap.com/theme/v1.3/autonavi.png">
+							        		<img src="images/autonavi.png">
 							        	</a>
 							        	<div class="amap-copyright" style="display: none;"><!--v1.3.28--> © 2018 AutoNavi 
 							        		<span class="amap-mcode">- GS(2016)710号</span>
@@ -559,6 +565,53 @@
 							    </div>
 							</div>
             			</div>
+            			
+            			<!--招聘职位-->
+            			<div id="containerCompanyDetails" class="recruitJob" style="display: none;">
+							<div class="posfilterlist_container item_container">
+							    <div class="item_ltitle">
+							        近两月共有 <span class="list_total"> 0 </span> 个在招职位
+							    </div>
+							    <div class="item_content">
+							        <div class="item_con_filter">
+							            <span class="con_filter_type">职位：</span>
+							            <ul class="con_filter_ul">
+							                                                                                                                                                                                                                                                                                        </ul>
+							        </div>
+							        <div class="item_con_list_container">该公司近两个月暂无招聘的职位</div>
+							    </div>
+							</div>
+						</div>
+						
+						<!--公司问答-->
+						<div id="containerCompanyDetails" class="companyAsk" style="display: none;">               
+							<div class="question-list-container" id="question_container" data-islogin="1">
+							    <div class="empty-tips">
+							        <div class="tips-icon tips-draw"></div>
+							        <p class="text">还没有人对这家公司提问</p>
+							    </div>
+							    <div class="send_question">
+							        <p>提出对店小二餐饮连锁公司感兴趣的问题，邀请过来人帮你解答~</p>
+							        <input type="text" id="searchQuestion" value="" maxlength="50" placeholder="你的问题是什么">
+							        <input type="hidden" class="questionPrompt" value="你为什么选择加入店小二餐饮连锁公司？">
+							        <ul class="company_question_list"></ul>
+							        <a href="javascript:;" class="edit_introduce" >编辑问题补充</a>
+							        <a href="javascript:;" class="submit_question" >提问</a>
+							        <div class="edit_content">
+							            <textarea class="question_supplement" maxlength="500" placeholder="在此补充问题的其他信息，如：背景、相关资料等"></textarea>
+							                <ul class="answer_to">
+							                    <li class="ask-to">向谁提问</li>
+							                </ul>
+							                <input type="hidden" value="1" class="default_man">
+							                <div class="submit_content">
+							                    <a href="javascript:;"  class="improve_sub">发布问题</a>
+							                    <span class="noncommit" >匿名提问</span>
+							                    <input type="hidden" value="PC" class="mysource">
+							                </div>     
+							        </div>
+							    </div>
+							</div>
+						</div>
         			</div>
 
         			<div id="container_right">
@@ -687,7 +740,7 @@
 							    <div class="item_manager_edit item_content">
 							        <div class="item_manger_photo">
 							            
-							                <img src="//www.lgstatic.com/hr/static/company/modules/managers/img/leader_default_c3e060f.png" width="120" height="120">
+							                <img src="images/leader_default_c3e060f.png" width="120" height="120">
 							            
 							            <div class="shadow"></div>
 							            <div class="text">更换头像<br>120px*120px<br>小于10M</div>
@@ -711,7 +764,7 @@
 							        </div>
 							        <div class="form_item">
 							            <div class="manager_content_wrap">
-							                <div class="edui-container" style="width: 210px; z-index: 999;"><div class="edui-toolbar"><div class="edui-btn-toolbar" unselectable="on" onmousedown="return false"><div class="edui-btn edui-btn-fullscreen" unselectable="on" onmousedown="return false" data-original-title="全屏"> <div unselectable="on" class="edui-icon-fullscreen edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-source" unselectable="on" onmousedown="return false" data-original-title="源代码"> <div unselectable="on" class="edui-icon-source edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-separator" unselectable="on" onmousedown="return false"></div><div class="edui-btn edui-btn-undo  edui-disabled" unselectable="on" onmousedown="return false" data-original-title="撤销"> <div unselectable="on" class="edui-icon-undo edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-redo  edui-disabled" unselectable="on" onmousedown="return false" data-original-title="重做"> <div unselectable="on" class="edui-icon-redo edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-separator" unselectable="on" onmousedown="return false"></div><div class="edui-btn edui-btn-bold" unselectable="on" onmousedown="return false" data-original-title="加粗"> <div unselectable="on" class="edui-icon-bold edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-italic" unselectable="on" onmousedown="return false" data-original-title="斜体"> <div unselectable="on" class="edui-icon-italic edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-underline" unselectable="on" onmousedown="return false" data-original-title="下划线"> <div unselectable="on" class="edui-icon-underline edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-strikethrough" unselectable="on" onmousedown="return false" data-original-title="删除线"> <div unselectable="on" class="edui-icon-strikethrough edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-separator" unselectable="on" onmousedown="return false"></div><div class="edui-btn edui-btn-superscript" unselectable="on" onmousedown="return false" data-original-title="上标"> <div unselectable="on" class="edui-icon-superscript edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-subscript" unselectable="on" onmousedown="return false" data-original-title="下标"> <div unselectable="on" class="edui-icon-subscript edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-separator" unselectable="on" onmousedown="return false"></div><div class="edui-splitbutton edui-splitbutton-forecolor" unselectable="on" data-original-title="字体颜色"><div class="edui-btn" unselectable="on"><div unselectable="on" class="edui-icon-forecolor edui-icon"></div><div class="edui-splitbutton-color-label"></div></div><div unselectable="on" class="edui-btn edui-dropdown-toggle"><div unselectable="on" class="edui-caret"></div></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-splitbutton edui-splitbutton-backcolor" unselectable="on" data-original-title="背景色"><div class="edui-btn" unselectable="on"><div unselectable="on" class="edui-icon-backcolor edui-icon"></div><div class="edui-splitbutton-color-label"></div></div><div unselectable="on" class="edui-btn edui-dropdown-toggle"><div unselectable="on" class="edui-caret"></div></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-separator" unselectable="on" onmousedown="return false"></div><div class="edui-btn edui-btn-removeformat" unselectable="on" onmousedown="return false" data-original-title="清除格式"> <div unselectable="on" class="edui-icon-removeformat edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-separator" unselectable="on" onmousedown="return false"></div><div class="edui-btn edui-btn-insertorderedlist" unselectable="on" onmousedown="return false" data-original-title="有序列表"> <div unselectable="on" class="edui-icon-insertorderedlist edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-insertunorderedlist" unselectable="on" onmousedown="return false" data-original-title="无序列表"> <div unselectable="on" class="edui-icon-insertunorderedlist edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-separator" unselectable="on" onmousedown="return false"></div><div class="edui-btn edui-btn-selectall" unselectable="on" onmousedown="return false" data-original-title="全选"> <div unselectable="on" class="edui-icon-selectall edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-cleardoc" unselectable="on" onmousedown="return false" data-original-title="清空文档"> <div unselectable="on" class="edui-icon-cleardoc edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn- edui-btn-name-paragraph edui-combobox" unselectable="on" onmousedown="return false" data-original-title="段落格式"> <span unselectable="on" onmousedown="return false" class="edui-button-label">段落格式</span><span class="edui-button-spacing"></span><span unselectable="on" onmousedown="return false" class="edui-caret"></span><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-separator" unselectable="on" onmousedown="return false"></div><div class="edui-btn edui-btn- edui-btn-name-fontfamily edui-combobox" unselectable="on" onmousedown="return false" data-original-title="字体"> <span unselectable="on" onmousedown="return false" class="edui-button-label">arial</span><span class="edui-button-spacing"></span><span unselectable="on" onmousedown="return false" class="edui-caret"></span><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn- edui-btn-name-fontsize edui-combobox" unselectable="on" onmousedown="return false" data-original-title="字号"> <span unselectable="on" onmousedown="return false" class="edui-button-label">字号</span><span class="edui-button-spacing"></span><span unselectable="on" onmousedown="return false" class="edui-caret"></span><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-separator" unselectable="on" onmousedown="return false"></div><div class="edui-btn edui-btn-justifyleft" unselectable="on" onmousedown="return false" data-original-title="居左对齐"> <div unselectable="on" class="edui-icon-justifyleft edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-justifycenter" unselectable="on" onmousedown="return false" data-original-title="居中对齐"> <div unselectable="on" class="edui-icon-justifycenter edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-justifyright" unselectable="on" onmousedown="return false" data-original-title="居右对齐"> <div unselectable="on" class="edui-icon-justifyright edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-separator" unselectable="on" onmousedown="return false"></div><div class="edui-btn edui-btn-link" unselectable="on" onmousedown="return false" data-original-title="超链接"> <div unselectable="on" class="edui-icon-link edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-unlink" unselectable="on" onmousedown="return false" data-original-title="取消链接"> <div unselectable="on" class="edui-icon-unlink edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-separator" unselectable="on" onmousedown="return false"></div><div class="edui-btn edui-btn-emotion" unselectable="on" onmousedown="return false" data-original-title="表情"> <div unselectable="on" class="edui-icon-emotion edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-image" unselectable="on" onmousedown="return false" data-original-title="图片"> <div unselectable="on" class="edui-icon-image edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-video" unselectable="on" onmousedown="return false" data-original-title="视频"> <div unselectable="on" class="edui-icon-video edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-separator" unselectable="on" onmousedown="return false"></div><div class="edui-btn edui-btn-map" unselectable="on" onmousedown="return false" data-original-title="百度地图"> <div unselectable="on" class="edui-icon-map edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-separator" unselectable="on" onmousedown="return false"></div><div class="edui-btn edui-btn-horizontal" unselectable="on" onmousedown="return false" data-original-title="分隔线"> <div unselectable="on" class="edui-icon-horizontal edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-print" unselectable="on" onmousedown="return false" data-original-title="打印"> <div unselectable="on" class="edui-icon-print edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-preview" unselectable="on" onmousedown="return false" data-original-title="预览"> <div unselectable="on" class="edui-icon-preview edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-drafts  edui-disabled" unselectable="on" onmousedown="return false" data-original-title="草稿箱"> <div unselectable="on" class="edui-icon-drafts edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div><div class="edui-btn edui-btn-formula" unselectable="on" onmousedown="return false" data-original-title="数学公式"> <div unselectable="on" class="edui-icon-formula edui-icon"></div><div class="edui-tooltip" unselectable="on" onmousedown="return false" style="z-index: 1000;"><div class="edui-tooltip-arrow" unselectable="on" onmousedown="return false"></div><div class="edui-tooltip-inner" unselectable="on" onmousedown="return false"></div></div></div></div><div class="edui-dialog-container"></div></div><div class="edui-editor-body"><div class="manager_content edui-body-container" contenteditable="true" style="width: 180px; min-height: 60px; z-index: 999;"><p><span data-tag="zns6GSI672389sdnxzcxxz" style="font-size:14px;color:#a9a9a9;padding-left:5px;">请输入该人物介绍</span></p></div><textarea id="manager_content" class="manager_content valid" name="remark" aria-invalid="false" style="display: none;"></textarea></div></div>
+							                <div class="edui-container" style="width: 210px; z-index: 999;"></div>
 							                <span class="wordcount">还可输入<b>500</b>字</span>
 							            </div>
 							        </div>
@@ -927,5 +980,73 @@
                 
             </div>
 		</div>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$(".company_index").click(function(){
+					$(".companyIndex").show();
+					$(".recruitJob").hide();
+					$(".companyAsk").hide();
+					$(".li_one").addClass("current")
+					$(".li_two").removeClass("current")
+					$(".li_three").removeClass("current")
+				});
+				$(".recruit_job").click(function(){
+					$(".companyIndex").hide();
+					$(".recruitJob").show();
+					$(".companyAsk").hide();
+					$(".li_two").addClass("current")
+					$(".li_one").removeClass("current")
+					$(".li_three").removeClass("current")
+				});
+				$(".company_ask").click(function(){
+					$(".companyIndex").hide();
+					$(".recruitJob").hide();
+					$(".companyAsk").show();
+					$(".li_three").addClass("current")
+					$(".li_one").removeClass("current")
+					$(".li_two").removeClass("current")
+				});
+				$(".add_one,.add_product").click(function(){
+					$(".item_content_one").hide();
+					$(".add_btn_wrap").hide();
+					$(".item_content_one_edit").show();
+					$(".item_cancel_add").show();
+					
+				});
+				$(".cancel_add_one,.cancel_btn_one").click(function(){
+					$(".item_content_one").show();
+					$(".add_btn_wrap").show();
+					$(".item_content_one_edit").hide();
+					$(".item_cancel_add").hide()
+				});
+				$(".add_two,.add_image").click(function(){
+					$(".item_ropera1_content").hide();
+					$(".item_content_two").hide();
+					$(".item_content_add_wrap").show();
+					$(".item_content_edit_two").show();
+					$(".item_ropera1_content").show();
+				})
+				$(".cancel_add_two,.cancel_btn_two").click(function(){
+					$(".item_ropera1_content").show();
+					$(".item_content_two").show();
+					$(".item_content_add_wrap").hide();
+					$(".item_content_edit_two").hide();
+					$(".item_ropera1_content").hide();
+				});
+				$(".add_three,.add_process").click(function(){
+					$(".item_add_wrap_three").hide()
+					$(".item_content_edit_three").show();
+					$(".item_content_three").hide();
+				})
+				$(".cancel_btn_three,.cancel_add_three").click(function(){
+					$(".item_add_wrap_three").show()
+					$(".item_content_edit_three").hide();
+					$(".item_content_three").show();
+				});
+				$(".eventTipOne,.idropdown").click(function(){
+					$(".eventUlOne").toggle();
+				})
+			});
+		</script>
 	</body>
 </html>

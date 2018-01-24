@@ -302,3 +302,10 @@ tr {
     vertical-align: inherit;
     border-color: inherit;
 }
+button, input, optgroup, select, textarea {
+    margin: 0;
+    padding: 0;
+    border: 1px solid #ededed;
+    border-radius: 0;
+    font-family: "Hiragino Sans GB","Microsoft Yahei",SimSun,Arial,"Helvetica Neue",Helvetica;
+}

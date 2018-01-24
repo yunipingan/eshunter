@@ -36,7 +36,7 @@
     float: left;
     width: 12px;
     height: 15px;
-    background: url(//www.lgstatic.com/hr/static/company/modules/common/img/icons1_b3ea05c.png) no-repeat 0 -48px;
+    background: url(../images/icons1_b3ea05c.png) no-repeat 0 -48px;
     margin: 4px 5px 0 0;
 }
 .company_main h1 {
@@ -60,7 +60,7 @@
     width: 10px;
     height: 10px;
     margin: 7px 0 0 2px;
-    background: url(//www.lgstatic.com/hr/static/company/modules/top-info/img/link_3f05ca8.png);
+    background: url(../images/link_3f05ca8.png);
     cursor: pointer;
 }
 .company_main .company_word {
@@ -108,7 +108,7 @@
     height: 15px;
     margin-left: -6px;
     vertical-align: -4px;
-    background: url(//www.lgstatic.com/hr/static/company/modules/top-info/img/publisher_data_tip_af42c15.png) right center no-repeat;
+    background: url(../images/publisher_data_tip_af42c15.png) right center no-repeat;
 }
 .top_info .top_info_wrap .company_icon_dsz {
     position: absolute;
@@ -154,7 +154,7 @@
     width: 60px;
     height: 47px;
     margin: 34px 0 0 50px;
-    background: url(//www.lgstatic.com/hr/static/company/modules/common/img/icons1_b3ea05c.png) no-repeat -23px 0;
+    background: url(../images/icons1_b3ea05c.png) no-repeat -23px 0;
 }
 .company_logo_edit .upload_text span {
     display: block;
@@ -184,7 +184,7 @@
     float: left;
     width: 15px;
     height: 15px;
-    background: url(//www.lgstatic.com/hr/static/company/modules/common/img/icons1_b3ea05c.png) no-repeat 0 -83px;
+    background: url(../images/icons1_b3ea05c.png) no-repeat 0 -83px;
     margin: 4px 5px 0 0;
     cursor: pointer;
 }
@@ -292,7 +292,7 @@
     margin: -5px 0 5px 0;
 }
 span.error {
-    background-image: url(//www.lgstatic.com/hr/static/company/modules/common/main_z_b8431b6.png);
+    background-image: url(../images/main_z_b8431b6.png);
 }
 
 span.error {
@@ -345,7 +345,7 @@ span.error {
     right: -40px;
     width: 38px;
     height: 20px;
-    background: url(//www.lgstatic.com/hr/static/company/modules/tabs/img/news_tip_a426ee1.png) no-repeat;
+    background: url(../images/news_tip_a426ee1.png) no-repeat;
 }
 .company_navs_wrap .company_share {
     position: relative;
@@ -363,7 +363,7 @@ span.error {
     float: left;
     width: 28px;
     height: 28px;
-    background-image: url(//www.lgstatic.com/hr/static/company/modules/tabs/img/css_sprites_c518bff.png);
+    background-image: url(../images/css_sprites_c518bff.png);
     background-repeat: no-repeat;
     background-position: -203px -14px;
     background-color: #fafafa;
@@ -375,7 +375,7 @@ span.error {
     float: left;
     width: 28px;
     height: 28px;
-    background-image: url(//www.lgstatic.com/hr/static/company/modules/tabs/img/css_sprites_c518bff.png);
+    background-image: url(../images/css_sprites_c518bff.png);
     background-repeat: no-repeat;
     background-position: -203px -49px;
     background-color: #fafafa;
@@ -388,7 +388,7 @@ span.error {
     float: left;
     width: 28px;
     height: 28px;
-    background-image: url(//www.lgstatic.com/hr/static/company/modules/tabs/img/css_sprites_c518bff.png);
+    background-image: url(../images/css_sprites_c518bff.png);
     background-repeat: no-repeat;
     background-position: -280px -14px;
     background-color: #fafafa;
@@ -500,7 +500,7 @@ span.error {
     float: left;
     height: 15px;
     width: 15px;
-    background: url(//www.lgstatic.com/hr/static/company/modules/common/img/icons_b641e81.png) no-repeat 0 0;
+    background: url(../images/icons_b641e81.png) no-repeat 0 0;
     margin: 0 5px 0 0;
     margin-top: 2px\0;
 }
@@ -562,7 +562,7 @@ span.error {
     margin-left: 120px;
 }
 .item_container .item_ropeicone {
-    background: url(//www.lgstatic.com/hr/static/company/modules/common/img/icons_b641e81.png) no-repeat -36px 0;
+    background: url(../images/icons_b641e81.png) no-repeat -36px 0;
 }
 #company_intro .company_intro_text {
     display: none;
@@ -593,7 +593,7 @@ span.error {
     width: 45px;
     height: 45px;
     vertical-align: middle;
-    background-image: url(//www.lgstatic.com/hr/static/company/modules/common/img/unhappy_5739ae4.png);
+    background-image: url(../images/unhappy_5739ae4.png);
 }
 #interview_container .reviews-empty .empty_text {
     padding-left: 10px;
@@ -605,7 +605,7 @@ span.error {
     display: none;
 }
 .item_container .item_ropeicons {
-    background: url(//www.lgstatic.com/hr/static/company/modules/common/img/icons_b641e81.png) no-repeat -18px 0;
+    background: url(../images/icons_b641e81.png) no-repeat -18px 0;
 }
 .address_container .item_content {
     position: relative;
@@ -895,7 +895,7 @@ span.error {
     width: 60px;
     height: 46px;
     margin: 66px 0 0 30px;
-    background: url(//www.lgstatic.com/hr/static/company/modules/common/img/icons1_b3ea05c.png) no-repeat -23px -51px;
+    background: url(../images/icons1_b3ea05c.png) no-repeat -23px -51px;
 }
 #company_products .upload_product_img .text span {
     position: absolute;
@@ -1106,13 +1106,16 @@ span.lgCheckBox em {
     width: 60px;
     height: 46px;
     margin: 96px 0 0 50px;
-    background: url(//www.lgstatic.com/hr/static/company/modules/common/img/icons1_b3ea05c.png) no-repeat -23px -51px;
+    background: url(../images/icons1_b3ea05c.png) no-repeat -23px -51px;
 }
 #introForm li .upload_company_img span {
     position: absolute;
     margin: 96px 0 0 125px;
     line-height: 24px;
     cursor: pointer;
+}
+#leaderUpload{
+	display: none;
 }
 #introForm li .upload_company_img .upload-file-wrap {
     position: absolute;
@@ -1150,6 +1153,11 @@ span.lgCheckBox em {
 .form_date_type label {
     float: left;
     width: 322px;
+}
+span.lgCheckBox_chked em {
+    background: url(../images/icons1_b3ea05c.png) no-repeat 0 -116px;
+    background-color: #00b38a;
+    border: 1px solid #00b38a;
 }
 .item_container .item_content_edit label {
     zoom: 1;
@@ -1190,6 +1198,9 @@ span.lgCheckBox em {
 }
 .simulate_select span.eventtip {
     color: #a9a9b6;
+}
+.simulate_select ul li:hover {
+    background-color: #f4f4f4;
 }
 .simulate_select span {
     height: 30px;
@@ -1446,4 +1457,179 @@ span.lgCheckBox em {
     padding: 10px 25px;
     margin-top: 5px;
 }
-/*弹窗*/
+/*职位招聘*/
+.posfilterlist_container .item_ltitle {
+    font-size: 18px;
+    color: #333;
+}
+.posfilterlist_container .item_ltitle .list_total {
+    color: #D32F2F;
+}
+.posfilterlist_container .item_con_filter {
+    display: none;
+    position: relative;
+    padding: 15px;
+    border: 1px solid #e8e8e8;
+    background-color: #fafafa;
+    zoom: 1;
+}
+.posfilterlist_container .item_con_filter .con_filter_ul {
+    float: left;
+    zoom: 1;
+}
+/*公司问答*/
+.question-list-container {
+    margin: 0 auto 72px;
+    width: 100%;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.5;
+    position: relative;
+}
+.question-list-container .empty-tips {
+    margin: 58px auto 20px;
+    width: 500px;
+    text-align: center;
+}
+.question-list-container .empty-tips .tips-draw {
+    width: 70px;
+    height: 70px;
+    position: relative;
+    background: url(../images/green_smile_2fb8352.png) no-repeat;
+    margin: 0 auto;
+}
+.question-list-container .empty-tips .text {
+    padding: 0;
+    color: #333;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 26px;
+    margin-bottom: 20px;
+}
+.send_question {
+    width: 704px;
+    margin: 60px auto;
+    position: relative;
+}
+.send_question p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 12px;
+}
+.send_question input {
+    width: 662px;
+    height: 28px;
+    padding: 10px 20px;
+    border-radius: 3px;
+    border-color: #dce4e6;
+    color: #999;
+    font-size: 14px;
+}
+.send_question input {
+    width: 662px;
+    height: 28px;
+    padding: 10px 20px;
+    border-radius: 3px;
+    border-color: #dce4e6;
+    color: #999;
+    font-size: 14px;
+}
+.send_question .company_question_list {
+    display: none;
+    position: absolute;
+    top: 89px;
+    left: 0;
+    z-index: 999999;
+    border-radius: 3px;
+    border: 1px solid #dce4e6;
+}
+.send_question .edit_introduce {
+    display: inline-block;
+    width: 132px;
+    height: 38px;
+    text-align: center;
+    line-height: 38px;
+    color: #00b38a;
+    font-size: 16px;
+    border: 1px solid #00b38a;
+    border-radius: 3px;
+    margin-top: 20px;
+}
+.send_question .submit_question {
+    display: inline-block;
+    width: 88px;
+    height: 38px;
+    text-align: center;
+    line-height: 38px;
+    background: #00b38a;
+    font-size: 16px;
+    color: #fff;
+    border: 1px solid #00b38a;
+    border-radius: 3px;
+    margin-left: 20px;
+}
+.send_question .edit_content {
+    height: 0;
+    overflow: hidden;
+}
+.send_question .edit_content .answer_to li {
+    display: inline-block;
+    padding-right: 15px;
+    font-size: 14px;
+    color: 3333;
+}
+.send_question .edit_content textarea {
+    width: 672px;
+    height: 178px;
+    border-color: #dce4e6;
+    margin-top: 20px;
+    border-radius: 3px;
+    padding: 15px;
+    color: #999;
+    font-size: 14px;
+    resize: none;
+}
+.send_question .edit_content .answer_to {
+    margin-top: 26px;
+}
+.send_question input {
+    width: 662px;
+    height: 28px;
+    padding: 10px 20px;
+    border-radius: 3px;
+    border-color: #dce4e6;
+    color: #999;
+    font-size: 14px;
+}
+.send_question .edit_content .submit_content {
+    margin-top: 30px;
+}
+.send_question .edit_content .submit_content a {
+    display: inline-block;
+    width: 100px;
+    height: 44px;
+    text-align: center;
+    line-height: 44px;
+    background: #00b38a;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 3px;
+}
+.send_question .edit_content .submit_content .noncommit {
+    display: inline-block;
+    margin-left: 24px;
+    color: #999;
+    font-size: 14px;
+    padding-left: 22px;
+    background: url(../images/no-check_523bee5.png) no-repeat 2px 2px;
+    cursor: pointer;
+}
+.send_question input {
+    width: 662px;
+    height: 28px;
+    padding: 10px 20px;
+    border-radius: 3px;
+    border-color: #dce4e6;
+    color: #999;
+    font-size: 14px;
+}
