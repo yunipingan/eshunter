@@ -757,6 +757,7 @@ span.error {
     margin: 0;
     font-size: 14px;
     color: #333;
+    display: none;
 }
 .navigator_container .nav_item {
     position: relative;
