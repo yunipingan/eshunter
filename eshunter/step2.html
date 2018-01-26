@@ -9,7 +9,7 @@
         <link href="css/style.css" type="text/css" rel="stylesheet">
         <link href="css/base.css?v=2.39" type="text/css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/app.css"/>
-        <link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+        <link rel="stylesheet" type="text/css" href="css/iconfont.css"/>       
         <link href="css/style_qq.css?v=2.33" type="text/css" rel="stylesheet">
         <script charset="utf-8" type="text/javascript" src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js"></script>
         <script src="js/hm.js?e57ac2e0d645c16f50e241abc140f59f"></script>
@@ -19,7 +19,8 @@
         <script defer="defer" src="js/placeholder.js?v=2.32" type="text/javascript"></script>
         <script defer="defer" src="js/common.js?v=2.34" type="text/javascript"></script> 
         <script defer="defer" src="js/public.js?v=2.32" type="text/javascript"></script>
-        <script defer="defer" src="js/main.js?v=2.32" type="text/javascript"></script>   
+        <script defer="defer" src="js/main.js?v=2.32" type="text/javascript"></script> 
+        <script src="js/header.js" type="text/javascript" charset="utf-8"></script>
      	<script>
                                         var techtag = "";
                                         var jieduan = "";
@@ -435,12 +436,12 @@
     			</div>
     			<div class="comp-wrap img-to-img clearfix">
     				<div class="left_box left">
-    					<img src="//www.lgstatic.com/i/image3/M00/0A/E2/CgpOIFplkTuAWeggAAAEkyy1i9Y490.gif" alt="用户头像" class="img1"> 
+    					<img src="images/1.gif" alt="用户头像" class="img1"> 
     					<p>陈XX·老板</p>
     				</div> 
     				<div class="horizon-line"></div> 
     				<div class="right_box right">
-    					<img src="//www.lgstatic.com/images/logo_default.png" alt="公司头像" class="img2"> 
+    					<img src="images/1.gif" alt="公司头像" class="img2"> 
     					<p>店小二</p>
     				</div>
     			</div>
@@ -460,8 +461,8 @@
     								<span class="required title">公司简称</span>
     							</td> 
     							<td>
-    								<input type="text" placeholder="请填写全称简写或主要产品名称，将展示在公司主页" name="companyShortName" class="inputer"> 
-    								<span class="vue-error"><i class="iconfont icon-gantanhao icon-glyph-attention2"></i> 此项不能为空</span>
+    								<input type="text" placeholder="请填写全称简写或主要产品名称，将展示在公司主页" name="companyShortName" class="inputer input_zore"> 
+    								<span class="vue-error vue-error-0" style="display: none;"><i class="iconfont icon-gantanhao icon-glyph-attention2"></i> 此项不能为空</span>
     							</td>
     						</tr> 
     						<tr>
@@ -470,112 +471,74 @@
     							</td> 
     							<td>
     								<div class="comp-wrap vue-checkbox-select inputer">
-    									<input name="industryField" type="text" readonly="readonly" placeholder="请选择" class="button"> 
-    										<i class="triangle"></i> 
-    										<div class="dropdown-wrap" style="display: none;">
+    									<input name="industryField" type="text" readonly="readonly" placeholder="请选择" class="button input_one"> 
+    										<i class="triangle input_one"></i> 
+    										<div class="dropdown-wrap ul_one" style="display: none;">
     											<p style="font-size: 14px; color: rgb(153, 153, 153); margin-top: 12px;">(最多可选择两个)</p> 
-    											<ul class="clearfix">
+    											<ul class=" ul_one1 clearfix ">
     												<li data-value="移动互联网">
-    													<span class="comp-wrap vue-checkbox" data-index="0">
-    														<i class=""></i>移动互联网
-    													</span>
+    													移动互联网
     												</li>
     												<li data-value="电子商务">
-    													<span class="comp-wrap vue-checkbox" data-index="1">
-    														<i class=""></i>电子商务
-    													</span>
+    													电子商务
     												</li>
     												<li data-value="社交网络">
-    													<span class="comp-wrap vue-checkbox" data-index="2">
-    														<i class=""></i>社交网络
-    													</span>
+    													社交网络
     												</li>
     												<li data-value="企业服务">
-    													<span class="comp-wrap vue-checkbox" data-index="3">
-    														<i class=""></i>企业服务
-    													</span>
+    													企业服务
     												</li>
     												<li data-value="O2O">
-    													<span class="comp-wrap vue-checkbox" data-index="4">
-    														<i class=""></i>O2O
-    													</span>
+    													O2O
     												</li>
     												<li data-value="教育">
-    													<span class="comp-wrap vue-checkbox" data-index="5">
-    														<i class=""></i>教育
-    													</span>
+    													教育
     												</li>
     												<li data-value="游戏">
-    													<span class="comp-wrap vue-checkbox" data-index="6">
-    														<i class=""></i>游戏
-    													</span>
+    													游戏
     												</li>
     												<li data-value="旅游">
-    													<span class="comp-wrap vue-checkbox" data-index="7">
-    														<i class=""></i>旅游
-    													</span>
+    													旅游
     												</li>
     												<li data-value="金融">
-    													<span class="comp-wrap vue-checkbox" data-index="8">
-    														<i class=""></i>金融
-    													</span>
+    													金融
     												</li>
     												<li data-value="医疗健康">
-    													<span class="comp-wrap vue-checkbox" data-index="9">
-    														<i class=""></i>医疗健康
-    													</span>
+    													医疗健康
     												</li>
     												<li data-value="生活服务">
-    													<span class="comp-wrap vue-checkbox" data-index="10">
-    														<i class=""></i>生活服务
-    													</span>
+    													生活服务
     												</li>
     												<li data-value="信息安全">
-    													<span class="comp-wrap vue-checkbox" data-index="11">
-    														<i class=""></i>信息安全
-    													</span>
+    													信息安全
     												</li>
     												<li data-value="数据服务">
-    													<span class="comp-wrap vue-checkbox" data-index="12">
-    														<i class=""></i>数据服务
-    													</span>
+    													数据服务
     												</li>
     												<li data-value="广告营销">
-    													<span class="comp-wrap vue-checkbox" data-index="13">
-    														<i class=""></i>广告营销
-    													</span>
+    													广告营销
     												</li>
     												<li data-value="文化娱乐">
-    													<span class="comp-wrap vue-checkbox" data-index="14">
-    														<i class=""></i>文化娱乐
-    													</span>
+    													文化娱乐
     												</li>
     												<li data-value="硬件">
-    													<span class="comp-wrap vue-checkbox" data-index="15">
-    														<i class=""></i>硬件
-    													</span>
+    													硬件
     												</li>
     												<li data-value="分类信息">
-    													<span class="comp-wrap vue-checkbox" data-index="16">
-    														<i class=""></i>分类信息
-    													</span>
+    													分类信息
     												</li>
     												<li data-value="招聘">
-    													<span class="comp-wrap vue-checkbox" data-index="17">
-    														<i class=""></i>招聘
-    													</span>
+    													招聘
     												</li>
     												<li data-value="其他">
-    													<span class="comp-wrap vue-checkbox" data-index="18">
-    														<i class=""></i>其他
-    													</span>
+    													其他
     												</li>
     											</ul> 
     											<div class="error-tips" style="display: none;">
     												<i class="iconfont icon-gantanhao icon-glyph-attention2"></i> 行业领域最多可选2个
             									</div>
     										</div> 
-    										<span class="vue-error"><i class="iconfont icon-gantanhao icon-glyph-attention2"></i> 此项不能为空</span>
+    										<span class="vue-error vue-error-1" style="display: none;"><i class="iconfont icon-gantanhao icon-glyph-attention2"></i> 此项不能为空</span>
     								</div>
     							</td>
     						</tr> 
@@ -585,9 +548,9 @@
     							</td> 
     							<td>
     								<div need-validate="true" class="comp-wrap vue-select inputer">
-    									<input name="companySize" type="text" readonly="readonly" placeholder="请选择" class="button"> 
-    										<i class="triangle"></i> 
-    										<ul class="" style="display: none;">
+    									<input name="companySize" type="text" readonly="readonly" placeholder="请选择" class="button input_two"> 
+    										<i class="triangle input_two"></i> 
+    										<ul class="ul_two" style="display: none;">
     											<li data-value="少于15人">
                     								少于15人
                 								</li>
@@ -607,7 +570,7 @@
                     								2000人以上
                 								</li>
     										</ul> 
-    										<span class="vue-error"><i class="iconfont icon-gantanhao icon-glyph-attention2"></i> 此项不能为空</span>
+    										<span class="vue-error vue-error-2" style="display: none;"><i class="iconfont icon-gantanhao icon-glyph-attention2"></i> 此项不能为空</span>
     								</div>
     							</td>
     						</tr> 
@@ -617,9 +580,9 @@
     							</td> 
     							<td>
     								<div need-validate="true" class="comp-wrap vue-select inputer">
-    									<input name="financeStage" type="text" readonly="readonly" placeholder="请选择" class="button"> 
+    									<input name="financeStage" type="text" readonly="readonly" placeholder="请选择" class="button input_three"> 
     										<i class="triangle"></i> 
-    										<ul class="atUp" style="display: none;">
+    										<ul class="atUp ul_three" style="display: none;">
     											<li data-value="未融资">
                     								未融资
                 								</li>
@@ -645,7 +608,7 @@
                     								不需要融资
                 								</li>
     										</ul> 
-    										<span class="vue-error"><i class="iconfont icon-gantanhao icon-glyph-attention2"></i> 此项不能为空</span>
+    										<span class="vue-error vue-error-3" style="display: none;"><i class="iconfont icon-gantanhao icon-glyph-attention2"></i> 此项不能为空</span>
     								</div>
     							</td>
     						</tr> 
@@ -790,8 +753,119 @@
                 </div>
                 
             </div>
+            <script src="js/jquery.wheelmenu.js" type="text/javascript"></script>
+			<div class="QQ_each">
+			        <a class="wheel-button float_qq" href="#wheel" style="opacity: 1;"></a>
+			        <ul class="wheel" id="wheel">
+			            <li class="item"><a href="#"></a></li>
+			            <li class="item"><a href="#"></a></li>
+			            <li class="item"><a href="#"></a></li>
+			            <li class="item"><a href="#"></a></li>
+			            <!--<li class="item"><a target="_blank" href="#" class='sss'>沙僧</a></li>-->
+			            <li class="item"><a class="bj" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1538590175&amp;site=qq&amp;menu=yes" target="_blank">求职<br>服务</a></li>
+			            <li class="item"><a class="wk" href="http://wpa.qq.com/msgrd?v=3&amp;uin=3078167392&amp;site=qq&amp;menu=yes" target="_blank">招聘<br>服务</a></li>
+			            <li class="item"><a class="ts" href="http://wpa.qq.com/msgrd?v=3&amp;uin=6281927&amp;site=qq&amp;menu=yes" target="_blank">bug<br>反馈</a></li>      
+			            <li class="item"><a href="#"></a></li>
+			            <li class="item"><a href="#"></a></li>
+			            <li class="item"><a href="#"></a></li>
+			        </ul>
+			    </div>
+			<a style="display: none;" class="back_to_top" title="" href="#"></a>
+	
 			<script type="text/javascript">
-				
+			$(".wheel-button").wheelmenu({
+			    // alert(1);
+			    trigger: "hover",
+			    animation: "fly",
+			    angle: [0, 360]
+			});
+			</script>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$(".input_one").click(function(){
+						$(".ul_one").toggle()
+					});
+					$(".input_two").click(function(){
+						$(".ul_two").toggle()
+					});
+					$(".input_three").click(function(){
+						$(".ul_three").toggle()
+					});
+					$(function(){
+						$(".ul_three li").bind("click",function(){
+							
+							selectedItem(this);
+						});
+					});
+						
+					function selectedItem(obj){
+						var $elemThis = $(obj);
+						var txt_this = $elemThis.text();
+						$(".input_three").val(txt_this);
+					}
+					$('input').blur(function () {
+        				this.style.borderColor = this.value == '' ? 'red' : 'green';
+					})
+					$('.input_zore').blur(function(){
+						if ($('.input_zore').val() == '') {
+							$(".vue-error-0").show()
+						} else{
+							$(".vue-error-0").hide()
+						}
+					})
+					$('.input_one').blur(function(){
+						if ($('.input_one').val() == '') {
+							$(".vue-error-1").show()
+						} else{
+							$(".vue-error-1").hide()
+						}
+					})
+					$('.input_two').blur(function(){
+						if ($('.input_two').val() == '') {
+							$(".vue-error-2").show()
+						} else{
+							$(".vue-error-2").hide()
+						}
+					})
+					$('.input_three').blur(function(){
+						if ($('.input_three').val() == '') {
+							$(".vue-error-3").show()
+						} else{
+							$(".vue-error-3").hide()
+						}
+					})
+				});
+			</script>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$(function(){
+						$(".ul_two li").bind("click",function(){
+							
+							selectedItem(this);
+						});
+					});
+						
+					function selectedItem(obj){
+						var $elemThis = $(obj);
+						var txt_this = $elemThis.text();
+						$(".input_two").val(txt_this);
+					}
+				})
+			</script>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$(function(){
+						$(".ul_one1 li").bind("click",function(){
+							selectedItem(this);
+						});
+					});
+						
+					function selectedItem(obj){
+						var $elemThis = $(obj);
+						var txt_this = $elemThis.text();
+						$(".input_one").val(txt_this);
+					}
+				})
 			</script>
 </body>
 </html>

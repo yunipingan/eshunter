@@ -19,6 +19,7 @@
         <script defer="defer" src="js/common.js?v=2.34" type="text/javascript"></script>  
         <script defer="defer" src="js/fenye2.js?v=2.33" type="text/javascript"></script>  
         <script defer="defer" src="js/public.js?v=2.32" type="text/javascript"></script>
+        <script src="js/header.js" type="text/javascript" charset="utf-8"></script>
         <script defer="defer" src="js/main.js?v=2.32" type="text/javascript"></script>
 	    <style type="text/css">
 	    	
@@ -495,6 +496,33 @@
                 </div>
                 
             </div>
+            <script src="js/jquery.wheelmenu.js" type="text/javascript"></script>
+		<div class="QQ_each">
+		        <a class="wheel-button float_qq" href="#wheel" style="opacity: 1;"></a>
+		        <ul class="wheel" id="wheel">
+		            <li class="item"><a href="#"></a></li>
+		            <li class="item"><a href="#"></a></li>
+		            <li class="item"><a href="#"></a></li>
+		            <li class="item"><a href="#"></a></li>
+		            <!--<li class="item"><a target="_blank" href="#" class='sss'>沙僧</a></li>-->
+		            <li class="item"><a class="bj" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1538590175&amp;site=qq&amp;menu=yes" target="_blank">求职<br>服务</a></li>
+		            <li class="item"><a class="wk" href="http://wpa.qq.com/msgrd?v=3&amp;uin=3078167392&amp;site=qq&amp;menu=yes" target="_blank">招聘<br>服务</a></li>
+		            <li class="item"><a class="ts" href="http://wpa.qq.com/msgrd?v=3&amp;uin=6281927&amp;site=qq&amp;menu=yes" target="_blank">bug<br>反馈</a></li>      
+		            <li class="item"><a href="#"></a></li>
+		            <li class="item"><a href="#"></a></li>
+		            <li class="item"><a href="#"></a></li>
+		        </ul>
+		    </div>
+		<a style="display: none;" class="back_to_top" title="" href="#"></a>
+
+		<script type="text/javascript">
+		$(".wheel-button").wheelmenu({
+		    // alert(1);
+		    trigger: "hover",
+		    animation: "fly",
+		    angle: [0, 360]
+		});
+		</script>
 			<script type="text/javascript">
 				$(document).ready(function(){
 				    $("#cboxClose").click(function(){

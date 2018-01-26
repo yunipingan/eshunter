@@ -20,6 +20,7 @@
         <script defer="defer" src="js/common.js?v=2.34" type="text/javascript"></script> 
         <script defer="defer" src="js/public.js?v=2.32" type="text/javascript"></script>
         <script defer="defer" src="js/main.js?v=2.32" type="text/javascript"></script>   
+        <script src="js/header.js" type="text/javascript" charset="utf-8"></script>
      	<script>
                                         var techtag = "";
                                         var jieduan = "";
@@ -455,7 +456,7 @@
                                 		<span class="tips">建议使用招聘者真实头像提升真实性、专业性
                                 			<br>支持jpg、jpeg、gif、png，小于10MB
                                 		</span> 
-                                		<span class="vue-error">
+                                		<span class="vue-error" style="display: none;">
                                 			<i class="iconfont icon-gantanhao icon-glyph-attention2"></i> 此项不能为空
                                 		</span>
     								</td>
@@ -465,8 +466,8 @@
     									<span class="required">姓名</span>
     								</td> 
     								<td>
-    									<input type="text" placeholder="请填写你工作中的姓名，用于向求职者展示" name="userName"> 
-    									<span class="vue-error"><i class="iconfont icon-gantanhao icon-glyph-attention2"></i> 此项不能为空</span>	
+    									<input type="text" class="input_one" placeholder="请填写你工作中的姓名，用于向求职者展示" name="userName"> 
+    									<span class="vue-error vue-error-1" style="display: none;"><i class="iconfont icon-gantanhao icon-glyph-attention2"></i> 此项不能为空</span>	
     								</td>
     							</tr> 
     							<tr>
@@ -475,8 +476,8 @@
     								</td> 
     								<td>
     									<div need-validate="true" class="comp-wrap vue-input-suggest" scope="props">
-    										<input name="positionName" placeholder="请填写当前公司的任职职位" type="text"> 
-    										<span class="vue-error"><i class="iconfont icon-gantanhao icon-glyph-attention2"></i> 此项不能为空</span>	
+    										<input name="positionName" class="input_two" placeholder="请填写当前公司的任职职位" type="text"> 
+    										<span class="vue-error vue-error-2" style="display: none;"><i class="iconfont icon-gantanhao icon-glyph-attention2"></i> 此项不能为空</span>	
     										<ul class="suggests" style="display: none;">
     												
     										</ul>
@@ -488,7 +489,7 @@
     									<span>接收简历邮箱</span>
     								</td> 
     								<td>
-    									<input type="text" placeholder="请填写常用邮箱，支持招聘设置中修改" name="receiveEmail"> 
+    									<input type="text" class="input_mail" placeholder="请填写常用邮箱，支持招聘设置中修改" name="receiveEmail"> 
     										<span class="vue-error" style="display: none;">
     											<i class="iconfont icon-gantanhao icon-glyph-attention2"></i> 
     										</span>
@@ -500,8 +501,8 @@
     								</td> 
     								<td class="company-name-td">
     									<div need-validate="true" class="comp-wrap vue-input-suggest" scope="props">
-    										<input name="companyName" placeholder="请填写与营业执照/劳动合同一致的全称，不可随便修改" type="text"> 
-    										<span class="vue-error"><i class="iconfont icon-gantanhao icon-glyph-attention2"></i> 此项不能为空</span> 
+    										<input name="companyName" class="input_three" placeholder="请填写与营业执照/劳动合同一致的全称，不可随便修改" type="text"> 
+    										<span class="vue-error vue-error-3" style="display: none"><i class="iconfont icon-gantanhao icon-glyph-attention2"></i> 此项不能为空</span> 
     											<ul class="suggests" style="display: none;">
     												
     											</ul>
@@ -519,8 +520,8 @@
     									<span class="positionName">职位</span>
     						</p> 
     						<p class="bottom">
-    							<span>接收简历邮箱</span> 
-    							<span>公司全称</span>
+    							<span class="receiveMail">接收简历邮箱</span> 
+    							<span class="companyFullName">公司全称</span>
     						</p> 
     						<span class="tail">示例</span>
     					</div>
@@ -598,6 +599,33 @@
                 </div>
                 
             </div>
+        <script src="js/jquery.wheelmenu.js" type="text/javascript"></script>
+		<div class="QQ_each">
+		        <a class="wheel-button float_qq" href="#wheel" style="opacity: 1;"></a>
+		        <ul class="wheel" id="wheel">
+		            <li class="item"><a href="#"></a></li>
+		            <li class="item"><a href="#"></a></li>
+		            <li class="item"><a href="#"></a></li>
+		            <li class="item"><a href="#"></a></li>
+		            <!--<li class="item"><a target="_blank" href="#" class='sss'>沙僧</a></li>-->
+		            <li class="item"><a class="bj" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1538590175&amp;site=qq&amp;menu=yes" target="_blank">求职<br>服务</a></li>
+		            <li class="item"><a class="wk" href="http://wpa.qq.com/msgrd?v=3&amp;uin=3078167392&amp;site=qq&amp;menu=yes" target="_blank">招聘<br>服务</a></li>
+		            <li class="item"><a class="ts" href="http://wpa.qq.com/msgrd?v=3&amp;uin=6281927&amp;site=qq&amp;menu=yes" target="_blank">bug<br>反馈</a></li>      
+		            <li class="item"><a href="#"></a></li>
+		            <li class="item"><a href="#"></a></li>
+		            <li class="item"><a href="#"></a></li>
+		        </ul>
+		    </div>
+		<a style="display: none;" class="back_to_top" title="" href="#"></a>
+
+		<script type="text/javascript">
+		$(".wheel-button").wheelmenu({
+		    // alert(1);
+		    trigger: "hover",
+		    animation: "fly",
+		    angle: [0, 360]
+		});
+		</script>
 			<script type="text/javascript">
 				$(document).ready(function(){
 				    $("#cboxClose").click(function(){
@@ -608,6 +636,42 @@
 				      $("#colorbox").show();
 				      $("#cboxOverlay").show();
 				    });
+				    $('input').blur(function () {
+        				this.style.borderColor = this.value == '' ? 'red' : 'green';
+					})
+				    $('.input_one').blur(function(){
+						if ($('.input_one').val() == '') {
+							$(".vue-error-1").show()
+						} else{
+							$(".vue-error-1").hide()
+						}
+					})
+					$('.input_two').blur(function(){
+						if ($('.input_two').val() == '') {
+							$(".vue-error-2").show()
+						} else{
+							$(".vue-error-2").hide()
+						}
+					})
+					$('.input_three').blur(function(){
+						if ($('.input_three').val() == '') {
+							$(".vue-error-3").show()
+						} else{
+							$(".vue-error-3").hide()
+						}
+					})
+					$(".input_one").keyup(function(){
+						$("span.userName").html(this.value)
+					})
+					$(".input_two").keyup(function(){
+						$("span.positionName").html(this.value)
+					})
+					$(".input_three").keyup(function(){
+						$("span.companyFullName").html(this.value)
+					})
+					$(".input_mail").keyup(function(){
+						$("span.receiveMail").html(this.value)
+					})
 				});
 			</script>
 </body>
