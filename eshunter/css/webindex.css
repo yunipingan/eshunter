@@ -315,7 +315,7 @@ a{color:#333;}
 .jl_search_left ul li.list3 span{ background: url(../images/have_inform.png) 20px 10px no-repeat;}
 .jl_search_left ul li.list4 span{ background: url(../images/no_bale.png) 20px 10px no-repeat;}
 /*首页轮播*/
-.m_banner{ background:#fafafa; height:241px; position:relative;}
+.m_banner{ background:#fafafa; height:328px; position:relative;}
 .m_banner .banner{height:241px;width:100%; position:absolute;top:0;left:0; background-position:center top;}
 .m_banner a{ display:none; width:30px; height:40px; position:absolute; top: 50%; margin-top: -20px; z-index:2;}
 .m_banner .prev{left:0px; background: url(../images/jt_zu.png) 0 -87px no-repeat;}

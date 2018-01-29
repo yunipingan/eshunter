@@ -20,66 +20,7 @@
         <script src="js/header.js" type="text/javascript" charset="utf-8"></script>
         <script defer="defer" src="js/public.js?v=2.32" type="text/javascript"></script>
         <script defer="defer" src="js/main.js?v=2.32" type="text/javascript"></script> 
-        <script defer="defer" src="js/companyresult.js?v=1.03" type="text/javascript"></script>  
-     	<script>
-                                        var techtag = "";
-                                        var jieduan = "";
-                                        var area = "";
-                                        var xinkeywd = "";
-                                        var currPage = parseInt("1");
-                                        var totalPage = 0;
-                                        $(function(){
-                                        // 鼠标滑过边框变色
-                                        $('.jieshao_list li').live('mouseover', function(){
-                                        $(this).addClass('greenborder_li');
-                                                $(this).siblings().removeClass('greenborder_li');
-                                        });
-                                                $('.jieshao_list li').live('mouseleave', function(){
-                                        $(this).removeClass('greenborder_li');
-                                        });
-//                                                loadHotCompany();
-                                        });
-        // 加载热门企业信息
-                                        function loadHotCompany() {
-                                        var url = "/nas/getHotCompany";
-                                                jQuery.ajax({
-                                                type : 'get',
-                                                        contentType : 'application/json; charset=utf-8',
-                                                        dataType : 'json',
-                                                        url : url,
-                                                        data : {},
-                                                        success : function(data) {
-                                                        var companys = data['result'];
-                                                                var html = "";
-                                                                jQuery.each(companys, function(i, company) {
-                                                                var imgLoge = "http://f.neipin.com/photo/company/" + company['company_logo'];
-                                                                        var youshi = company['youshi'];
-                                                                        var companyName = company['companyName'];
-                                                                        var company_ltd = company['company_ltd'];
-                                                                        if (company_ltd.length < 0){
-                                                                company_ltd = companyName;
-                                                                }
-                                                                var company_id = company['company_id'];
-                                                                        html = html +
-                                                                        '<li class="major-item">' +
-                                                                        '<a target="_blank" href="/c/' + company_id + '.html" >' +
-                                                                        '<span class="tongyong_loge" style=\'background: rgba(0, 0, 0, 0) url("' + imgLoge + '") no-repeat scroll 0 0;z-index:2;background-size:114px 114px;-webkit-background-size: 114px 114px;\'></span>' +
-                                                                        '<span class="back-face" >' +
-                                                                        '<h2>' + company_ltd + '</h2>' +
-                                                                        '<div>' + youshi + '</div>' +
-                                                                        '</span>' +
-                                                                        '</a>' +
-                                                                        '</li>';
-                                                                });
-                                                                $('#hotCompanyList').html('');
-                                                                $('#hotCompanyList').html(html);
-                                                        },
-                                                        error : function(XMLHttpRequest, textStatus, errorThrown) {
-                                                        alert(XMLHttpRequest.status);
-                                                        }
-                                                });
-                                        }
-        </script>
+                                        
     </head>
     <body>
             <link href="css/base.css?v=2.39" type="text/css" rel="stylesheet">
@@ -91,21 +32,7 @@
 				var uname = "";
 				var ukbn = "";
 				var isIE7 = false;
-				//验证标识
-				var verifyflg = "";
 				
-				function logout() {
-					jQuery.ajax({
-						type: 'post',
-						contentType: 'application/json; charset=utf-8',
-						dataType: 'json',
-						url: '/ajax/logout.do',
-						data: JSON.stringify(new Object()),
-						success: function(data) {
-							window.location.href = "/";
-						}
-					})
-				}
 				
 				$(document).ready(function() {
 					//底部tab切换
@@ -140,36 +67,9 @@
 					$('.about_Us span.ma_img').mouseout(function() {
 						$(this).find('img').hide();
 					})
-					//点击登录
-					$('#login_click').live("click", function() {
-						my_login();
-					});
-					if(ukbn == 1) {
-						getSelectHrJobJianLi();
-					}
-					//点击导航的登录 
-					$('#dl_span').live("click", function() {
-						window.location.href = 'login.html.html';
-					});
-					// 账号的回车事件
-					$('#myusername').keydown(function(event) {
-						if(13 == event.keyCode || 13 == event.which) {
-							my_login();
-						}
-					});
-					//密码的回车事件
-					$('#mypassword').keydown(function(event) {
-						if(13 == event.keyCode || 13 == event.which) {
-							my_login();
-						}
-					});
-					// 搜索职位的回车事件 
-					$('#my_job_form').keydown(function(event) {
-						if(13 == event.keyCode || 13 == event.which) {
-							headtijiao();
-						}
-					});
-					//登录框隐藏与显示
+					
+				
+					
 					//$('.dl_hide').hide();
 					$('.pos_dl').mouseenter(function() {
 						$('.dl_hide').show();
@@ -185,175 +85,13 @@
 					$('.wx_pos').mouseleave(function() {
 						$(this).find('img').hide();
 					})
-					if(uname != "" && uname != null) {
-						// 调用此方法 
-						getSelectProfileJobJianLi();
-					}
-				
-					// 事件关闭
+					
 					$('.event_top span').click(function() {
 						$(this).parent().slideUp();
 					})
 				
-					$('.event_top').click(function() {
-						window.open("/act");
-					})
-				
-					if(uname != "" && uname != null && ukbn == 1) {
-						getHrNewJianliNum();
-					}
-				
 				});
-				// 查询职位方法 
-				function headtijiao() {
-					var xinkeywd = encodeURIComponent($("#my_job_form").val());
-					window.location.href = '/job/?mkwd=' + xinkeywd;
-				}
-				//查询职位方法结束 
 				
-				// 登录方法 
-				function my_login() {
-					$("#herders_cuowu").hide();
-					var param = new Object();
-					param.emailAddr = $("#myusername").val();
-					param.passwd = $("#mypassword").val();
-					if(param.emailAddr == "") {
-						$("#herders_cuowu").html("请填写用户名");
-						$("#herders_cuowu").show();
-						return;
-					}
-					if(param.passwd == "") {
-						$("#herders_cuowu").html("请填写密码");
-						$("#herders_cuowu").show();
-						return;
-					}
-				
-					jQuery.ajax({
-						type: 'post',
-						contentType: 'application/json; charset=utf-8',
-						dataType: 'json',
-						url: '/ajax/login.do',
-						data: JSON.stringify(param),
-						success: function(data) {
-							if(data.ret == "0") {
-								if(data.ukbn == 1) {
-									//window.location.href = "/hr/";
-									window.location.href = "/job.html";
-								} else {
-									window.location.href = "/job.html";
-								}
-							} else if(data.ret == -1) {
-								$("#herders_cuowu").html("用户不存在或密码错误");
-								$("#herders_cuowu").show();
-							} else {
-								$("#herders_cuowu").html("登录失败，请稍候重试");
-								$("#herders_cuowu").show();
-							}
-						}
-					});
-				};
-				//查询普通用户没有回复hr面试通知的数量
-				function getSelectProfileJobJianLi() {
-					var param = new Object();
-					var total = 0;
-					jQuery.ajax({
-						type: 'post',
-						contentType: 'application/json; charset=utf-8',
-						dataType: 'json',
-						url: '/ajax/getSelectProfileJobJianLi.do',
-						data: JSON.stringify(param),
-						success: function(data) {
-							if(data.np.number0 > 0) {
-								total = total + data.np.number0;
-								//$("#profile_jianli_number").text(data.np.number0);
-								//$("#profile_jianli_number").show();
-								$("#profile_jianli_number2").text(data.np.number0);
-								$("#profile_jianli_number2").show();
-							}
-							if(jianlistatustype == 0) {
-								if(data.np.number1 > 0) {
-									$("#profile_jianli_number_1").text(data.np.number1);
-									$("#profile_jianli_number_1").show();
-								}
-								if(data.np.number2 > 0) {
-									$("#profile_jianli_number_2").text(data.np.number2);
-									$("#profile_jianli_number_2").show();
-								}
-								if(data.np.number3 > 0) {
-									$("#profile_jianli_number_3").text(data.np.number3);
-									$("#profile_jianli_number_3").show();
-								}
-				
-							}
-							if(jianlistatustype == 1) {
-								if(data.np.number3 > 0) {
-									$("#profile_jianli_number_1").text(data.np.number4);
-									$("#profile_jianli_number_1").show();
-								}
-								if(data.np.number4 > 0) {
-									$("#profile_jianli_number_2").text(data.np.number5);
-									$("#profile_jianli_number_2").show();
-								}
-								if(data.np.number5 > 0) {
-									$("#profile_jianli_number_3").text(data.np.number6);
-									$("#profile_jianli_number_3").show();
-								}
-				
-							}
-							var jk = parseInt(data.np.number1) + parseInt(data.np.number2) + parseInt(data.np.number3);
-							var jk1 = parseInt(data.np.number4) + parseInt(data.np.number5) + parseInt(data.np.number6);
-							if(jk > 0) {
-								$("#profile_jianli_number_4").text(jk);
-								$("#profile_jianli_number_4").show();
-							}
-							if(jk1 > 0) {
-								$("#profile_jianli_number_5").text(jk1);
-								$("#profile_jianli_number_5").show();
-							}
-							total = total + jk + jk1;
-							if(total > 0) {
-								$("#jianli_status").append('<em>' + total + '</em>');
-							}
-						}
-					});
-				};
-				//查询hr没有回复数量 
-				function getSelectHrJobJianLi() {
-					jQuery.ajax({
-						type: 'post',
-						contentType: 'application/json; charset=utf-8',
-						dataType: 'json',
-						url: '/ajax/getSelectHrJobJianLi.do',
-						data: JSON.stringify(new Object()),
-						success: function(data) {
-							if(data.np.number1 > 0) {
-								$("#hr_mei_jianli").append("<em>" + data.np.number1 + "</em>");
-								$("#shou").append("<em>" + data.np.number1 + "</em>");
-							}
-							if(data.np.number2 > 0) {
-								$("#hr_tong_jianli").append("<em>" + data.np.number2 + "</em>");
-							}
-						}
-					});
-				};
-				//查询Hr新简历数
-				function getHrNewJianliNum() {
-					jQuery.ajax({
-						type: 'post',
-						contentType: 'application/json; charset=utf-8',
-						dataType: 'json',
-						url: '/ajax/newnum.do',
-						data: JSON.stringify(new Object()),
-						success: function(data) {
-							if(data.newnum > 0) {
-								$('.num').show();
-								$('.num').text(data.newnum);
-							} else {
-								$('.num').hide();
-							}
-						}
-					});
-				}
 
 			</script>
             <div style="width:100%; height:50px; line-height:50px; font-size:18px; color:#b94a48; background:#f2dede; text-align:center;" class="bsie">
