@@ -41,4 +41,4 @@
 .send_2wma em{ font-size: 18px; color: #32b16c; font-family:'黑体'; float: left; 
 font-style: normal; line-height: 40px; cursor: pointer; display: none; margin-left:92px; }
 .send_2wma span{ float: left; color: #999; line-height: 40px; margin-left:92px;}
-.stepTwo,.message,.four_steap{display: none;}
+.stepTwo,.message,.four_steap{display: block;}
