@@ -129,6 +129,7 @@ em.msg_amount {
 .footer{     width: 100%;
     border-top: 1px solid #ddd;
     background: #fefefe;
+    clear: both;
     }
 .footer p{}
 .footer p.seap{     /* border-top: 1px solid #818181; */

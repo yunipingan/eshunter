@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="renderer" content="webkit">
+		<title>我的消息</title>
+		<link href="http://www.eshunter.com/favicon/favicon-16x16.png" rel="shortcut icon">
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="css/msgDetail.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style_qq.css"/>
+		<link rel="stylesheet" type="text/css" href="css/pagination.css"/>
+		<script src="js/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/header.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="es_tbar">
+            <div class="inner">
+                <div class="es_tbar_l">
+                    <span class="iconfont icon-shouji"></span><a class="es_app" href="#" rel="nofollow">电竞猎人APP</a>
+                    <a class="es_os" href="restrict.html" rel="nofollow">进入企业版</a>
+                </div>
+                <ul class="es_tbar_r">
+                    <li>
+                        <a class="message" href="#">消息<em class="msg_amount" id="headMsgAmount">2</em></a>
+                    </li>
+                    <li><a href="my_resume.html">我的简历</a></li>
+                    <li><a href="delivery.html">投递箱</a></li>
+                    <li><a href="#">收藏夹</a></li>
+                    <li class="user_dropdown">
+                        <a href="#">用户<span></span></a>
+                        <ul>
+                            <li><a href="">我的订阅</a></li>
+                            <li><a href="">职位邀请</a></li>
+                            <li><a href="userInfo.html">账号设置</a></li>
+                            <li><a href="restrict.html">去企业版</a></li>
+                            <li><a href="">退出</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>  
+        <div class="header">
+            <div class="header_con">
+                <div class="logo-con">
+                    <a title="" href="index.html"><img src="images/logo-black.png" style="height:43px;width:132px"></a>
+                    <span style="padding-left:10px;font-size:12px;color:#999;display: inline-block;margin-top: 25px;">电竞猎人 - 做专业的竞技游戏职业招聘网站</span>
+                </div>
+                <ul class="nav_ul">
+                    <li id="index"><a class="home" title="电竞猎人" href="index.html">首页</a></li>
+                    <li id="company"><a class="qiye" title="" href="company.html" rel="nofollow">职位搜索</a></li>
+                    <li class="pos_relative" id="xiu"><a class="xiu" href="#" rel="nofollow">大神库</a></li>
+                    <li id="cuan"><a class="post_Jb" title="" href="news.html" rel="nofollow">资讯中心</a></li>
+                </ul>
+            </div>
+        </div>
+        <script src="js/jquery.wheelmenu.js" type="text/javascript"></script>
+		<div class="QQ_each">
+		        <a class="wheel-button float_qq" href="#wheel" style="opacity: 1;"></a>
+		        <ul class="wheel" id="wheel">
+		            <li class="item"><a href="#"></a></li>
+		            <li class="item"><a href="#"></a></li>
+		            <li class="item"><a href="#"></a></li>
+		            <li class="item"><a href="#"></a></li>
+		            <!--<li class="item"><a target="_blank" href="#" class='sss'>沙僧</a></li>-->
+		            <li class="item"><a class="bj" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1538590175&amp;site=qq&amp;menu=yes" target="_blank">求职<br>服务</a></li>
+		            <li class="item"><a class="wk" href="http://wpa.qq.com/msgrd?v=3&amp;uin=3078167392&amp;site=qq&amp;menu=yes" target="_blank">招聘<br>服务</a></li>
+		            <li class="item"><a class="ts" href="http://wpa.qq.com/msgrd?v=3&amp;uin=6281927&amp;site=qq&amp;menu=yes" target="_blank">bug<br>反馈</a></li>      
+		            <li class="item"><a href="#"></a></li>
+		            <li class="item"><a href="#"></a></li>
+		            <li class="item"><a href="#"></a></li>
+		        </ul>
+		    </div>
+		<a style="display: none;" class="back_to_top" title="" href="#"></a>
+
+		<script type="text/javascript">
+		$(".wheel-button").wheelmenu({
+		    // alert(1);
+		    trigger: "hover",
+		    animation: "fly",
+		    angle: [0, 360]
+		});
+		</script>
+		<div id="messageContainer" class="container cleafix">
+			<div class="content-left">
+				<div class="left-wrap">
+					<div class="setting-box">
+					    <h2 class="main-title">我的消息</h2>
+					    <div class="setting-btn" style="display: none;">
+					        <a href="#" data-lg-tj-id="1810" >设置</a>
+					    </div>
+					</div>
+					<div class="category-tab">
+					    <div class="item-wrap">
+					        <ul class="tab" id="tabContainer">
+					            <li class="tab-item item_1 active">
+					            	<a href="javascript:;">全部</a></li>
+					            <li class="sep">
+					            	<span>|</span>
+					            </li>
+					            <li class="tab-item item_2">
+					            	<a  href="javascript:;">投递反馈</a>
+					            </li>
+					            <li class="sep">
+					            	<span>|</span>
+					            </li>
+					            <li class="tab-item item_3">
+					            	<a href="javascript:;">职位邀请</a>
+					            </li>
+					            <li class="sep">
+					            	<span>|</span>
+					            </li>
+					            
+					            <li class="tab-item item_4">
+					            	<a href="javascript:;">系统通知</a>
+					            </li>
+					        </ul>
+					    </div>
+					</div>
+					<div class="twrap">
+						<div class="tab-content" id="msgContent">
+							<!--全部-->
+							<div class="t-content-item t-content-item_1 active" style="display: none;">
+								<ul class="msg-list" id="allListContainer">
+									<li class="msg-box" >
+							            <div class="msg-body">
+							                <div class="msg-type"><i class="msg-avant apply-v"></i></div>
+							                <div class="msg-content ">
+							                    <div class="msg-head ">
+							                        <div class="left">投递反馈</div>
+							                        <div class="right">2018-01-30 15:16</div>
+							                    </div>
+							                    <dl class="info">
+							                        <dt>
+							                            <a class="company-logo" target="_blank" href="#">
+							                                <img class="" src="images/pic0.jpg">
+							                            </a>
+							                        </dt>
+							                        <dd class="msg-info">
+							                            <h4>
+							                                <a href="#" target="_blank" class="job-title">王者荣耀玩家</a>
+							                                <em>·</em>
+							                                <a href="#" target="_blank">LGD俱乐部</a>
+							                            </h4>
+							                            <div class="msg-status">
+							                                <span>最新状态：</span>
+							                                <a href="#" target="_blank">不合适</a>
+							                            </div>
+							                            <a class="to-detail" target="_blank" href="#">去看看</a>
+							                        </dd>
+							                    </dl>
+							                </div>
+							            </div>
+							        </li>
+							        <li class="msg-box" >
+							            <div class="msg-body">
+							                <div class="msg-type"><i class="msg-avant apply-v"></i></div>
+							                <div class="msg-content ">
+							                    <div class="msg-head ">
+							                        <div class="left">投递反馈</div>
+							                        <div class="right">2018-01-30 15:16</div>
+							                    </div>
+							                    <dl class="info">
+							                        <dt>
+							                            <a class="company-logo" target="_blank" href="#">
+							                                <img class="" src="images/pic0.jpg">
+							                            </a>
+							                        </dt>
+							                        <dd class="msg-info">
+							                            <h4>
+							                                <a href="#" target="_blank" class="job-title">王者荣耀玩家</a>
+							                                <em>·</em>
+							                                <a href="#" target="_blank">LGD俱乐部</a>
+							                            </h4>
+							                            <div class="msg-status">
+							                                <span>最新状态：</span>
+							                                <a href="#" target="_blank">不合适</a>
+							                            </div>
+							                            <a class="to-detail" target="_blank" href="#">去看看</a>
+							                        </dd>
+							                    </dl>
+							                </div>
+							            </div>
+							        </li>
+							        <li class="msg-box" >
+							            <div class="msg-body">
+							                <div class="msg-type"><i class="msg-avant apply-v"></i></div>
+							                <div class="msg-content ">
+							                    <div class="msg-head ">
+							                        <div class="left">投递反馈</div>
+							                        <div class="right">2018-01-30 15:16</div>
+							                    </div>
+							                    <dl class="info">
+							                        <dt>
+							                            <a class="company-logo" target="_blank" href="#">
+							                                <img class="" src="images/pic0.jpg">
+							                            </a>
+							                        </dt>
+							                        <dd class="msg-info">
+							                            <h4>
+							                                <a href="#" target="_blank" class="job-title">王者荣耀玩家</a>
+							                                <em>·</em>
+							                                <a href="#" target="_blank">LGD俱乐部</a>
+							                            </h4>
+							                            <div class="msg-status">
+							                                <span>最新状态：</span>
+							                                <a href="#" target="_blank">不合适</a>
+							                            </div>
+							                            <a class="to-detail" target="_blank" href="#">去看看</a>
+							                        </dd>
+							                    </dl>
+							                </div>
+							            </div>
+							        </li>
+								</ul>
+							</div>
+							<!--投递反馈-->
+							<div class="t-content-item t-content-item_2" style="display: none;">
+								<ul class="msg-list" id="allListContainer">
+									<li class="msg-box" >
+							            <div class="msg-body">
+							                <div class="msg-type"><i class="msg-avant apply-v"></i></div>
+							                <div class="msg-content ">
+							                    <div class="msg-head ">
+							                        <div class="left">投递反馈</div>
+							                        <div class="right">2018-01-30 15:16</div>
+							                    </div>
+							                    <dl class="info">
+							                        <dt>
+							                            <a class="company-logo" target="_blank" href="#">
+							                                <img class="" src="images/pic0.jpg">
+							                            </a>
+							                        </dt>
+							                        <dd class="msg-info">
+							                            <h4>
+							                                <a href="#" target="_blank" class="job-title">王者荣耀玩家</a>
+							                                <em>·</em>
+							                                <a href="#" target="_blank">LGD俱乐部</a>
+							                            </h4>
+							                            <div class="msg-status">
+							                                <span>最新状态：</span>
+							                                <a href="#" target="_blank">不合适</a>
+							                            </div>
+							                            <a class="to-detail" target="_blank" href="#">去看看</a>
+							                        </dd>
+							                    </dl>
+							                </div>
+							            </div>
+							        </li>
+							        <li class="msg-box" >
+							            <div class="msg-body">
+							                <div class="msg-type"><i class="msg-avant apply-v"></i></div>
+							                <div class="msg-content ">
+							                    <div class="msg-head ">
+							                        <div class="left">投递反馈</div>
+							                        <div class="right">2018-01-30 15:16</div>
+							                    </div>
+							                    <dl class="info">
+							                        <dt>
+							                            <a class="company-logo" target="_blank" href="#">
+							                                <img class="" src="images/pic0.jpg">
+							                            </a>
+							                        </dt>
+							                        <dd class="msg-info">
+							                            <h4>
+							                                <a href="#" target="_blank" class="job-title">王者荣耀玩家</a>
+							                                <em>·</em>
+							                                <a href="#" target="_blank">LGD俱乐部</a>
+							                            </h4>
+							                            <div class="msg-status">
+							                                <span>最新状态：</span>
+							                                <a href="#" target="_blank">不合适</a>
+							                            </div>
+							                            <a class="to-detail" target="_blank" href="#">去看看</a>
+							                        </dd>
+							                    </dl>
+							                </div>
+							            </div>
+							        </li>
+							        <li class="msg-box" >
+							            <div class="msg-body">
+							                <div class="msg-type"><i class="msg-avant apply-v"></i></div>
+							                <div class="msg-content ">
+							                    <div class="msg-head ">
+							                        <div class="left">投递反馈</div>
+							                        <div class="right">2018-01-30 15:16</div>
+							                    </div>
+							                    <dl class="info">
+							                        <dt>
+							                            <a class="company-logo" target="_blank" href="#">
+							                                <img class="" src="images/pic0.jpg">
+							                            </a>
+							                        </dt>
+							                        <dd class="msg-info">
+							                            <h4>
+							                                <a href="#" target="_blank" class="job-title">王者荣耀玩家</a>
+							                                <em>·</em>
+							                                <a href="#" target="_blank">LGD俱乐部</a>
+							                            </h4>
+							                            <div class="msg-status">
+							                                <span>最新状态：</span>
+							                                <a href="#" target="_blank">不合适</a>
+							                            </div>
+							                            <a class="to-detail" target="_blank" href="#">去看看</a>
+							                        </dd>
+							                    </dl>
+							                </div>
+							            </div>
+							        </li>
+								</ul>
+							</div>
+							<!--职位邀请-->
+							<div class="t-content-item t-content-item_3" style="display: none;">
+							    <ul class="msg-list" id="invitationListContainer">
+								    <li class="no-msg">
+								        <div class="no-msg-text">
+								            <p class="lg_msg_avatar no_msg_i">暂时没有新的消息~</p>
+								        </div>
+								    </li>
+							    </ul>
+							    <div class="item_con_pager"></div>
+							</div>
+							<!--系统通知-->
+							<div class="t-content-item t-content-item_4" style="display: block;">
+							    <ul class="msg-list" id="invitationListContainer">
+								    <li class="msg-box">
+								        <div class="msg-body">
+					                        <div class="msg-type"><i class="msg-avant system-v"></i></div>
+					                        <div class="msg-content">
+					                            <div class="msg-head">
+					                                <div class="left">系统通知</div>
+					                                <div class="right">2017-04-07 12:19</div>
+					                            </div>
+					                            <div class="info">
+					                                <div class="pai-info">
+					                                    
+					                                                                 【电竞猎人邀请你】一拍专注中高端人才求职，无需主动投递简历，3500家名企虚位以待，1次申请，10个面试机会，2周敲定更好工作。
+					                                    <a class="complete-link" href="#" target="_blank" >去试试</a>
+					
+					                                </div>
+					                                <!-- <a class="to-detail" href="">去看看</a> -->
+					                            </div>
+					                        </div>
+					                    </div>
+								    </li>
+								    
+								    <li class="msg-box">
+								        <div class="msg-body">
+					                        <div class="msg-type"><i class="msg-avant system-v"></i></div>
+					                        <div class="msg-content">
+					                            <div class="msg-head">
+					                                <div class="left">系统通知</div>
+					                                <div class="right">2017-04-07 12:19</div>
+					                            </div>
+					                            <div class="info">
+					                                <p class="system-info">
+					                                        <a class="sys-link" href="#" target="_blank">
+					                                                <span class="sys-title">成都国美大数据线下干货分享&amp;招聘狂欢趴~高薪职位等你来！</span>
+					                                                <img src="images/Cgp.PNG" >
+					                                        </a>
+					                                        4月8日，相约在成都市高新区萃华路89号国际科技节能大厦17楼
+					                                </p>
+					                                    <a class="to-detail" href="#" target="_blank">查看详情</a>
+					                            </div>
+					                        </div>
+					                    </div>
+								    </li>
+							    </ul>
+							    <div class="item_con_pager"></div>
+							</div>
+						</div>
+					</div>
+					<div class="Page" id="pagination"><a href="javascript:void(0)" goto="1" class="show gopage">1</a><a href="javascript:void(0)" goto="2" class="gopage">2</a><a href="javascript:void(0)" goto="3" class="gopage">3</a><a href="javascript:void(0)" goto="4" class="gopage">4</a><a href="javascript:void(0)" goto="5" class="gopage">5</a><a href="javascript:void(0)" goto="6" class="gopage">6</a><a href="javascript:void(0)" goto="7" class="gopage">7</a><a href="javascript:void(0)" goto="8" class="gopage">8</a><a href="javascript:void(0)" target="_self" flg="down" class="page_down pageup">下一页</a></div>
+				</div>
+			</div>
+			
+		</div>
+		<div class="footer cleafix">
+            <div class="footer_con">
+                <div class="footer_top">
+                    <div class="about_Us">
+                        <div class="contact_left">
+                            <div><img src="images/logo-black.png" style="height:43px;width:132px"></div> 
+                            <p>电竞猎人 - 做专业的竞技游戏职业招聘网站</p>
+                        </div>
+                            <!-- <div class="contact_right">
+                                <div class="contact_tab">
+                                    <span class="active">友情链接</span>
+                                    <span>合作伙伴</span>
+                                </div> 
+                                <div class="contact_Con">
+                                    <div style="padding: 10px 0px 30px; display: block;" class="contactCon">
+                                        <a title="" href="http://www.dajiatou.com" >大家投</a> |
+                                        <a href="http://www.uidesign.cc" >莱茵教育</a>  | 
+                                        <a title="" href="http://www.hostucan.cn" >IDC点评网</a> | 
+                                        <a title="" href="http://www.tklab.cn" >CCIE培训</a> | 
+                                        <a title="" href="http://www.51lietou.com" >51猎头</a> |
+                                        <a title="" href="http://www.vchello.com" >VChello微投网</a> |
+                                        <a title="" href="http://www.jianzhimao.com" >大学生找兼职</a>
+                                        <a title="" href="http://www.dajiatou.com" >大家投</a> |
+                                        <a href="http://www.uidesign.cc" >莱茵教育</a>  | 
+                                        <a title="" href="http://www.hostucan.cn" >IDC点评网</a> | 
+                                        <a title="" href="http://www.tklab.cn" >CCIE培训</a> | 
+                                        <a title="" href="http://www.51lietou.com" >51猎头</a> |
+                                        <a title="" href="http://www.vchello.com" >VChello微投网</a> |
+                                        <a title="" href="http://www.jianzhimao.com" >大学生找兼职</a>
+                                    </div>
+                                    <div style="padding-top: 10px; display: none;" class="contactCon">
+                                        <img src="images/dajiatou.jpg">
+                                        <img src="images/fenghuang.jpg">
+                                        <img src="images/lianxiang.jpg">
+                                        <img src="images/xiecheng.jpg">
+                                        <img src="images/yuuan.jpg">
+                                        <img src="images/zhaohang.jpg">
+                                        <img src="images/baidu.jpg">
+                                        <img src="images/mogu.jpg">
+                                        <img src="images/yong.jpg">
+                                    </div>
+                                </div> 
+                            </div> -->
+                    </div>
+                    <div class="foot_list">
+                        <div class="foot_list_item">
+                            <span class="about_left"><a title="" href="#">简历指导</a></span>
+                            <span class="about_left"><a title="" href="about.html">关于我们</a></span>
+                            <span class="about_left"><a title="" href="about.html">联系我们</a></span>
+                            <span class="about_left"><a title="" href="#">网站地图</a></span>
+                            <span class="about_left"><a title="" href="#">免责申明</a></span>
+                            <span class="about_left"><a title="" href="http://weibo.com/neipin2013" rel="nofollow" >微博</a></span>
+                            <span class="about_left wx_pos">
+                                <a title="" href="javascript:void(0)">微信服务号</a>
+                                <img src="images/yujia.jpg">
+                            </span>
+                            
+                        </div>
+                    	<p style="margin-top:10px;" class="seap">
+	                    	<span style="color:#939393">沪ICP备17037845号-1</span>
+	                    	<a  href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010102004612" target="_blank" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+	                    		<img src="http://www.eshunter.com/images/police.png" style="float:left;">
+	                    		<span style="height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">沪公网安备 31010102004612号</span>
+	                    		<span style="padding-left:15px;color:#939393"> ©2017电竞猎人 | E-sport Hunter版权所有</span>
+	                		</a>
+                		</p>
+                    </div> 
+                </div>
+            </div>
+                
+        </div>
+        <script type="text/javascript">
+        	$(document).ready(function(){
+        		$(".item_1").click(function(){
+        			$(".item_1").addClass("active")
+        			$(".item_2").removeClass("active")
+        			$(".item_3").removeClass("active")
+        			$(".item_4").removeClass("active")
+        			$(".t-content-item_1").show();
+        			$(".t-content-item_2").hide();
+        			$(".t-content-item_3").hide();
+        			$(".t-content-item_4").hide();
+        		})
+        		$(".item_2").click(function(){
+        			$(".item_1").removeClass("active")
+        			$(".item_2").addClass("active")
+        			$(".item_3").removeClass("active")
+        			$(".item_4").removeClass("active")
+        			$(".t-content-item_1").hide();
+        			$(".t-content-item_2").show();
+        			$(".t-content-item_3").hide();
+        			$(".t-content-item_4").hide();
+        		})
+        		$(".item_3").click(function(){
+        			$(".item_1").removeClass("active")
+        			$(".item_2").removeClass("active")
+        			$(".item_3").addClass("active")
+        			$(".item_4").removeClass("active")
+        			$(".t-content-item_1").hide();
+        			$(".t-content-item_2").hide();
+        			$(".t-content-item_3").show();
+        			$(".t-content-item_4").hide();
+        		})
+        		$(".item_4").click(function(){
+        			$(".item_1").removeClass("active")
+        			$(".item_2").removeClass("active")
+        			$(".item_3").removeClass("active")
+        			$(".item_4").addClass("active")
+        			$(".t-content-item_1").hide();
+        			$(".t-content-item_2").hide();
+        			$(".t-content-item_3").hide();
+        			$(".t-content-item_4").show();
+        		})
+        	})
+        </script>
+	</body>
+</html>
